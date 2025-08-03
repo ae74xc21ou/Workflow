@@ -41,8 +41,9 @@ Essa arquitetura facilita a escalabilidade do software, acelera o desenvolviment
 Workflow possibilita a integração com extensões de alto nível que operam em perfeita harmonia com o controle e automação do software. Cada ferramenta foi escolhida para transformar a manipulação de arquivos em uma experiência poderosa e intuitiva.
 
 - **7‑Zip:** Com tecnologia avançada de compressão e descompressão, o 7‑Zip eleva a eficiência do backup de dados e empacotamento de software, otimizando tamanho e performance.
-- **WebP:** Ideal para converter e otimizar imagens, o WebP gera arquivos de alta qualidade em tamanhos compactos – perfeito para web e armazenamento inteligente.
-- **FFmpeg:** Essencial para processamento multimídia, o FFmpeg facilita a conversão, transcodificação e manipulação de áudio e vídeo, integrando essas funções de forma fluida.
+- **WebP:** Ideal para a conversão de imagens sem perdas, o WebP gera arquivos de alta qualidade em tamanhos compactos, perfeito para web e armazenamento inteligente.
+- **Flac:** Especializado na conversão de áudios sem perdas, o FLAC preserva a fidelidade original enquanto reduz o tamanho dos arquivos, perfeito para backups com fidelidade máxima.
+- **FFmpeg:** Essencial para processamento multimídia, o FFmpeg facilita a conversão, transcodificação e manipulação de imagens, áudios e vídeos de forma fluida.
 
 Ao possibilitar o acoplamento de extensões, Workflow expande suas funcionalidades para oferecer uma solução completa, versátil e poderosa. Essa abordagem permite que Workflow atenda a uma ampla variedade de necessidades e contextos, proporcionando uma experiência superior para todos os usuários.
 
@@ -78,23 +79,24 @@ De forma geral, monólitos são convenientes por reduzir a sobrecarga cognitiva,
 
 | Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Crescimento |
 | :----: | :--------: | :--------: | :-----: | :-----------------: | :-------------: | :---------: |
+| 84     | 25.08.0    | 03/08/2025 | Sim     | x64/ARM64           | Windows/Linux   | +01,06%     |
 | 83     | 25.07.0    | 06/07/2025 | Sim     | x64/ARM64           | Windows/Linux   | -02,82%     |
 | 82     | 25.06.1    | 01/06/2025 | Sim     | x64/ARM64           | Windows/Linux   | -00,02%     |
 | 81     | 25.06.0    | 01/06/2025 | Não     | x64/ARM64           | Windows/Linux   | -22,16%     |
-| 80     | 25.05.0    | 04/05/2025 | Sim     | x86/x64/ARM32/ARM64 | Windows/Linux   | +00,15%     |
+| 80     | 25.05.0    | 04/05/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +00,15%     |
 | 79     | 25.04.0    | 06/04/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +09,73%     |
 | 78     | 25.03.0    | 02/03/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +03,49%     |
 | 77     | 25.02.0    | 02/02/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +00,40%     |
 | 76     | 25.01.0    | 05/01/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +04,51%     |
-| 75     | 24.12.1    | 01/12/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +04,27%     |
-| 74     | 24.11.1    | 03/11/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +11,21%     |
-| 73     | 24.10.1    | 06/10/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +09,93%     |
 
 <details>
 <summary>Mais</summary>
 
 | Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Crescimento |
 | :----: | :--------: | :--------: | :-----: | :-----------------: | :-------------: | :---------: |
+| 75     | 24.12.1    | 01/12/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +04,27%     |
+| 74     | 24.11.1    | 03/11/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +11,21%     |
+| 73     | 24.10.1    | 06/10/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +09,93%     |
 | 72     | 24.09.1    | 01/09/2024 | Não     | x86/x64/ARM32/ARM64 | Windows         | +00,36%     |
 | 71     | 24.08.1    | 04/08/2024 | Não     | x86/x64/ARM32/ARM64 | Windows         | -03,80%     |
 | 70     | 24.07.1    | 07/07/2024 | Não     | x86/x64/ARM32/ARM64 | Windows         | +01,28%     |

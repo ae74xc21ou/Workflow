@@ -153,19 +153,32 @@ WebP é um formato moderno e versátil que oferece compressão lossless, resulta
 </details>
 
 <details>
-<summary>Como instalar extensões</summary>
+<summary>Formato Flac</summary>
 
-Verifique como instalar extensões na seção **Softwares de Terceiros**.
-
-> As extensões foram movidas para a estrutura de diretórios de software em ambiente **Linux** na versão **25.05.0**. Workflow não utilizará os binários das extensões disponíveis no `$PATH` do sistema, com exceção da extensão FFmpeg. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem interferir nos binários instalados via APT e reduzindo a necessidade de elevação de privilégios para a instalação de softwares adicionais.
+FLAC (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][Flac].
 
 </details>
 
 <details>
-
-<summary>Como atualizar extensões</summary>
+<summary>Como instalar extensões</summary>
 
 Verifique como instalar extensões na seção **Softwares de Terceiros**.
+
+> As extensões foram movidas para a estrutura de diretórios de software em ambiente **Linux** na versão **25.05.0**. Workflow não utilizará os binários das extensões disponíveis no `$PATH` do sistema, com exceção das extensões FFmpeg e Flac. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem interferir nos binários instalados via APT e reduzindo a necessidade de elevação de privilégios para a instalação de softwares adicionais.
+
+</details>
+
+<details>
+<summary>Como atualizar extensões</summary>
+
+Verifique como atualizar extensões na seção **Softwares de Terceiros**.
+
+</details>
+
+<details>
+<summary>Como desinstalar extensões</summary>
+
+Verifique como desinstalar extensões na seção **Softwares de Terceiros**.
 
 </details>
 
@@ -369,21 +382,19 @@ Home
 │   │       │   ├─ Vault
 │   │       │   ├─ Projetos
 │   │       │   └─ Softwares
-│   │       ├─ Nuvem
-│   │       │   ├─ OneDrive
-│   │       │   ├─ Google Drive
-│   │       │   ├─ iCloud Drive
-│   │       │   └─ Dropbox
-│   │       └─ Sistema
-│   │           ├─ Fontes
-│   │           └─ Drivers
+│   │       └─ Personalizado
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           └─ Disponível
 │   ├─ Conversão
 │   │   ├─ Diretório de Conversão
 │   │   └─ Preservar Originais
 │   ├─ Interface
 │   │   ├─ Cor Primária
-│   │   ├─ Cor Secundária
-│   │   └─ Cor Terciária
+│   │   └─ Cor Secundária
 │   ├─ Notificações
 │   │   ├─ Software
 │   │   ├─ Backup
@@ -423,7 +434,8 @@ Home
 │   └─ Restaurar
 ├─ Conversão
 │   ├─ Pacotes
-│   └─ Imagens
+│   ├─ Imagens
+│   └─ Áudios
 ├─ Diagnóstico
 │   └─ Relatório da Bateria
 ├─ Manutenção
@@ -455,17 +467,19 @@ Home
 │   │       │   ├─ Vault
 │   │       │   ├─ Projetos
 │   │       │   └─ Softwares
-│   │       ├─ Nuvem
-│   │       │   └─ Dropbox
-│   │       └─ Sistema
-│   │           └─ Fontes
+│   │       └─ Personalizado
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           ├─ Disponível
+│   │           └─ Disponível
 │   ├─ Conversão
 │   │   ├─ Diretório de Conversão
 │   │   └─ Preservar Originais
 │   ├─ Interface
 │   │   ├─ Cor Primária
-│   │   ├─ Cor Secundária
-│   │   └─ Cor Terciária
+│   │   └─ Cor Secundária
 │   ├─ Notificações
 │   │   ├─ Software
 │   │   ├─ Backup
@@ -626,12 +640,21 @@ Siga para `Configurações` `>` `Extensões` `>` `Atualizar`
 
 </details>
 
-### Outros
+<details>
+<summary>Como desinstalar</summary>
+
+Siga para `Configurações` `>` `Extensões` `>` `Desinstalar`
+
+> Pode requerer elevação de privilégios
+
+</details>
+
+### Fontes
 
 <details>
-<summary>Fontes: Como instalar</summary>
+<summary>Como instalar</summary>
 
-Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [JetBrains Mono][JetBrains Mono]. Adicionalmente você pode utilizar [Cascadia Code][Cascadia Code], [Ubuntu Family][Ubuntu Family] ou [Noto Sans Mono][Noto Sans Mono].
+Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [JetBrains Mono][JetBrains Mono]. Adicionalmente você pode utilizar [Cascadia Mono][Cascadia Mono], [Ubuntu Mono][Ubuntu Mono] ou [Noto Sans Mono][Noto Sans Mono].
 
 - Windows
     - Método 1
@@ -653,8 +676,9 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
 [Política de Suporte]: /Policies.md
 [7zip]: https://www.7-zip.org/7z.html
 [WebP]: https://developers.google.com/speed/webp
+[Flac]: https://xiph.org/flac/documentation.html
 [SPDX.org]: https://spdx.org/licenses/GPL-3.0-or-later.html
-[JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono
-[Cascadia Code]: https://github.com/microsoft/cascadia-code
-[Ubuntu Family]: https://design.ubuntu.com/font
+[JetBrains Mono]: https://fonts.google.com/specimen/JetBrains+Mono
+[Cascadia Mono]: https://fonts.google.com/specimen/Cascadia+Mono
+[Ubuntu Mono]: https://fonts.google.com/specimen/Ubuntu+Mono
 [Noto Sans Mono]: https://fonts.google.com/noto/specimen/Noto+Sans+Mono

