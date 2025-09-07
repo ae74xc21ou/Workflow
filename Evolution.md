@@ -73,15 +73,14 @@ A integração da inteligência artificial impulsionou o desenvolvimento do proj
 
 ## Lançamentos
 
-Workflow é aprimorado continuamente para ampliar a compatibilidade, introduzir novos recursos e melhorar funcionalidades, utilizando tecnologias flexíveis, eficientes e robustas, com preferência por soluções de código aberto. Tudo isso mantendo a simplicidade de uma arquitetura monolítica.
-
-De forma geral, monólitos são convenientes por reduzir a sobrecarga cognitiva, acelerar o desenvolvimento e a execução do software.
+Workflow é aprimorado continuamente para ampliar a compatibilidade, introduzir novos recursos e refinar funcionalidades, utilizando tecnologias flexíveis, eficientes e robustas, com preferência por soluções de código aberto. Tudo isso mantendo a simplicidade da arquitetura monolítica que reduz a sobrecarga cognitiva, acelera o desenvolvimento e a execução do software.
 
 | Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Crescimento |
 | :----: | :--------: | :--------: | :-----: | :-----------------: | :-------------: | :---------: |
+| 85     | 25.09.0    | 07/09/2025 | Sim     | x64/ARM64           | Windows/Linux   | +11,46%     |
 | 84     | 25.08.0    | 03/08/2025 | Sim     | x64/ARM64           | Windows/Linux   | +01,06%     |
 | 83     | 25.07.0    | 06/07/2025 | Sim     | x64/ARM64           | Windows/Linux   | -02,82%     |
-| 82     | 25.06.1    | 01/06/2025 | Sim     | x64/ARM64           | Windows/Linux   | -00,02%     |
+| 82     | 25.06.1    | 01/06/2025 | Não     | x64/ARM64           | Windows/Linux   | -00,02%     |
 | 81     | 25.06.0    | 01/06/2025 | Não     | x64/ARM64           | Windows/Linux   | -22,16%     |
 | 80     | 25.05.0    | 04/05/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +00,15%     |
 | 79     | 25.04.0    | 06/04/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +09,73%     |

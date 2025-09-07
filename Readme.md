@@ -16,4 +16,6 @@
 
 #
 
-[Ajuda](/Help.md) - [Evolução](/Evolution.md) - [Políticas](/Policies.md) - [Licenças](/License.md) - A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2025 David Camargo. Este projeto possui componentes sob [Licenças](/License.md) distintas, verifique a documentação para mais detalhes. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. **Projeto de desenvolvimento restrito; contribuições externas não são aceitas.**
+<div align="center">
+    <sub><a href="/Help.md">Ajuda</a> ∙ <a href="/Evolution.md">Evolução</a> ∙ <a href="/Policies.md">Políticas</a> ∙ <a href="/License.md">Licenças</a> ∙ A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2025 David Camargo. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito e contribuições externas não são aceitas.</sub>
+</div>

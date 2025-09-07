@@ -2,42 +2,95 @@
 
 Um guia para instalação e execução de software. Encontre soluções para problemas comuns, instruções de atualização, configuração e dicas para o uso de funcionalildades.
 
+## Fontes
+
+<details>
+<summary>O que são fontes</summary>
+
+Fontes são canais de distribuição de software que podem ser remotas ou locais, usadas para instalação e atualização.
+
+Permitir a seleção entre fontes é uma estratégia flexível que aumenta a disponibilidade do software, dando aos usuários a opção entre atualização automática e controle local. O recurso atende a cenários de desenvolvimento, produção e emergência e possibilita estratégias híbridas, combinando automação com segurança e redundância para rollback.
+
+</details>
+
+<details>
+<summary>Escolher uma fonte</summary>
+
+Ambas as abordagens oferecem vantagens, e a escolha depende da prioridade entre o controle, velocidade e disponibilidade.
+
+- Fonte remota
+    - Atualizações imediatas. Releases são obtidas assim que publicadas no repositório oficial;
+    - Distribuição global. GitHub e CDNs reduzem latência para usuários geograficamente dispersos;
+    - Ideal para usuários que querem sempre a versão mais recente ou integração contínua.
+- Fonte local
+    - Funciona offline. Instalações e atualizações sem dependência de rede;
+    - Controle total sobre o software. Útil para builds internos, testes e versões customizadas;
+    - Maior previsibilidade em ambientes isolados ou corporativos;
+    - Rapidez em reinstalações repetidas, sem consumo de banda externa;
+    - Facilita rollback imediato ao manter cópias locais de versões anteriores;
+    - Reduz riscos de disponibilidade por rate limits ou falhas no repositório remoto;
+    - Ideal para air-gapped, QA, ou quando é necessário auditar cada artefato manualmente.
+
+</details>
+
+<details>
+<summary>Locais das fontes</summary>
+
+- Fonte remota: repositório oficial do projeto no **GitHub**.
+- Fonte local: diretório **Downloads** do usuário local.
+
+> A fonte remota acessa diretamente os arquivos publicados no GitHub, enquanto a fonte local utiliza arquivos previamente baixados para o diretório Downloads do usuário local.
+
+</details>
+
+<details>
+<summary>Provisionar uma fonte local</summary>
+
+Provisionar uma fonte local significa preparar os arquivos de instalação ou atualização para que possam ser usados a partir da rede local. O processo consiste em obter os pacotes desejados, armazená-los no local apropriado e garantir que estejam íntegros e prontos para uso.
+
+- **Obter:** Baixe os **pacotes** de software e o arquivo **Metadata.json** a partir do repositório oficial ou gere uma release interna.
+- **Armazenar:** Copie ou mova os arquivos para o diretório **Downloads** do usuário local, que é o caminho padrão usado para a fonte local.
+- **Validar:** Verifique o hash dos pacotes de software para garantir que não foram corrompidos ou alterados.
+- **Configurar:** No software, ajuste a configuração para usar a fonte local como origem de instalação ou atualização. Em ambientes híbridos, é possível alternar entre fonte remota e local conforme necessário.
+- **Testar:** Execute uma instalação ou atualização de teste para validar que o software está reconhecendo a fonte local e utilizando os arquivos adequadamente.
+
+> Mantenha o nome dos arquivos conforme disponibilizado no repositório oficial, para evitar falhas de reconhecimento.
+
+</details>
+
 ## Instalação
 
 <details>
 <summary>Como instalar</summary>
 
 - Windows
-    - Baixe e descomprima o pacote
-    - Abra o PowerShell
-    - Habilite a execução de scripts `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force`
-    - Desbloqueie o script `Get-Item Workflow.ps1 | Unblock-File`
-    - Execute `.\Workflow.ps1`
+    - Baixe e descomprima o pacote;
+    - Abra o PowerShell;
+    - Habilite a execução de scripts `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force`;
+    - Desbloqueie o script `Get-Item Workflow.ps1 | Unblock-File`;
+    - Execute `.\Workflow.ps1`.
 - Linux
-    - Baixe e descomprima o pacote
-    - Abra o PowerShell `pwsh`
-    - Execute `./Workflow.ps1`
+    - Baixe e descomprima o pacote;
+    - Abra o PowerShell `pwsh`;
+    - Execute `./Workflow.ps1`.
 
+> Ao executar o software pela primeira vez, você precisará escolher uma fonte de instalação. Prefira a fonte **Remota**. Caso opte pela fonte local, verifique como provisionar uma fonte local.
+    
 </details>
 
 <details>
 <summary>Como executar</summary>
 
 - Windows
-    - Abra o PowerShell
-    - Navegue até a pasta inicial `Set-Location $Home`
-    - Execute `.\Workflow.ps1`
+    - Abra o PowerShell;
+    - Navegue até a pasta inicial `Set-Location $Home`;
+    - Execute `.\Workflow.ps1`.
 - Linux
-    - Abra o PowerShell `pwsh`
-    - Navegue até a pasta inicial `Set-Location $Home`
-    - Execute `./Workflow.ps1`
+    - Abra o PowerShell `pwsh`;
+    - Navegue até a pasta inicial `Set-Location $Home`;
+    - Execute `./Workflow.ps1`.
 
-</details>
-
-<details>
-<summary>Notificação de incompatibilidade após instalar</summary>
-
-O software verifica diversas informações do ambiente para garantir que seja executado em um cenário mínimo de compatibilidade. Verifique os requisitos de sistema na página de download e tente novamente após resolver a incompatibilidade.
+> Após a instalação, você pode usar o atalho criado no diretório do usuário local para executar o software.
 
 </details>
 
@@ -51,14 +104,21 @@ Você está executando uma versão de software sem suporte. Utilize a versão ma
 <details>
 <summary>Atalho ausente no diretório do usuário</summary>
 
-Se o atalho `Workflow.ps1` estiver ausente no diretório `$Home`, verifique o tópico **Acesso a Pastas Controladas** na seção **Software de Terceiros**. Em seguida execute Workflow manualmente a partir do diretório de instalação de software. O atalho será recriado automaticamente. Verifique a seção **Estrutura** para mais informações.
+Se o atalho `Workflow.ps1` estiver ausente no diretório `$Home` após a instalação, verifique o tópico **Acesso a Pastas Controladas** na seção **Software de Terceiros**. Em seguida execute Workflow manualmente a partir do diretório de instalação de software. O atalho será recriado automaticamente. Verifique a seção **Estrutura** para mais informações.
+
+</details>
+
+<details>
+<summary>Notificação de incompatibilidade ao instalar</summary>
+
+O software verifica diversas informações do ambiente para garantir que seja executado em um cenário mínimo de compatibilidade. Verifique os requisitos de sistema na página de download e tente novamente após resolver a incompatibilidade.
 
 </details>
 
 <details>
 <summary>Como desinstalar</summary>
 
-Siga para `Configurações` `>` `Desinstalar`
+Siga para `Configurações` `>` `Desinstalar`.
 
 </details>
 
@@ -67,17 +127,23 @@ Siga para `Configurações` `>` `Desinstalar`
 <details>
 <summary>Como manter o software atualizado</summary>
 
-Mantenha-se online e execute o software mensalmente para receber atualizações automáticas.
+Prossiga conforme a fonte configurada:
+
+- Fonte remota
+    - Mantenha-se online;
+    - Habilite a atualização automática;
+    - Execute o software regularmente.
+- Fonte local
+    - Mantenha a fonte local provisionada e atualizada adequadamente;
+    - Habilite a atualização automática;
+    - Execute o software regularmente.
 
 </details>
 
 <details>
-<summary>Erro de integridade comprometida</summary>
+<summary>O software não recebe atualizações automaticamente</summary>
 
-Esse erro pode ocorrer em diferentes situações e resulta nos seguintes efeitos:
-- Instalação ou atualização de software: pacotes inválidos não serão aplicados.
-- Alteração ilegal no algoritmo: a integridade de software é restaurada automaticamente.
-- Alterações indevidas no arquivo de backup: você será notificado e poderá realizar o backup novamente.
+Se o software não foi executado por um longo período e/ou a atualização automática está desabilitada, a versão instalada pode ter perdido suporte e está impossibilitada de receber atualizações. Prossiga com a desinstalação manual e a instalação da versão de software mais recente.
 
 </details>
 
@@ -89,27 +155,17 @@ Verifique os requisitos de sistema na página de download e tente novamente apó
 </details>
 
 <details>
-<summary>O software não recebe atualizações</summary>
+<summary>Erro de integridade comprometida</summary>
 
-Se o software não foi executado por um longo período, pode ter perdido suporte e está impossibilitado de receber atualizações automaticamente. Prossiga com a desinstalação manual e a instalação da versão de software mais recente.
+O erro de integridade pode ocorrer em diferentes contextos e resulta nos seguintes efeitos:
+
+- **Instalação ou atualização de software:** pacotes inválidos não serão aplicados.
+- **Alteração ilegal no algoritmo:** a integridade de software é restaurada automaticamente.
+- **Alterações indevidas no arquivo de backup:** você será notificado e poderá realizar o backup novamente.
 
 </details>
 
 ## Backup
-
-<details>
-<summary>Posso escolher o que incluir no backup?</summary>
-
-Sim. Siga para `Configurações` `>` `Backup` `>` `Conteúdo`
-
-</details>
-
-<details>
-<summary>Backup do armazenamento em nuvem corporativo não é possível</summary>
-
-Contas corporativas podem ter estruturas diferentes das contas pessoais, o que pode impedir a inclusão no backup.
-
-</details>
 
 <details>
 <summary>O que é suporte a multidispositivos e multiusuários?</summary>
@@ -125,13 +181,6 @@ Não. Workflow opera em nível de usuário, impedindo que outros acessem seus da
 
 </details>
 
-<details>
-<summary>O que é Vault?</summary>
-
-O Vault é uma pasta dentro do diretório do usuário para armazenar informações que podem ser incluídas no backup. Recomenda-se adicioná-la ao **Acesso a Pastas Controladas** nas configurações de segurança do Windows.
-
-</details>
-
 ## Conversão
 
 <details>
@@ -144,41 +193,14 @@ O Vault é uma pasta dentro do diretório do usuário para armazenar informaçõ
 <details>
 <summary>Formato WebP</summary>
 
-WebP é um formato moderno e versátil que oferece compressão lossless, resultando em arquivos menores sem perda de qualidade. Suporta transparência e animações, substituindo de forma eficiente formatos tradicionais como BMP, TIFF, PNG e GIF. Por ser um formato aberto e gratuito, não há custos com licenciamento ou royalties. Além disso, seu amplo suporte em sistemas operacionais, navegadores e ferramentas de edição o torna uma escolha inteligente em comparação com formatos mais recentes. [Saiba mais][WebP].
-
-> O suporte ao formato JPEG foi removido na versão **25.06.0** pois não foram identificados ganhos reais em eficiência de compressão.
-
-> O suporte aos formatos AVIF e JXL foi postergado devido ao custo computacional elevado e/ou baixa compatibilidade dos sistemas operacionais.
+WebP é um formato moderno e versátil que oferece compressão lossless, resultando em arquivos menores sem perda de qualidade. Suporta transparência e animações, substituindo de forma eficiente formatos tradicionais como BMP, TIFF, PNG e JPEG. Por ser um formato aberto e gratuito, não há custos com licenciamento ou royalties. Além disso, seu amplo suporte em sistemas operacionais, navegadores e ferramentas de edição o torna uma escolha inteligente em comparação com formatos mais recentes. [Saiba mais][WebP].
 
 </details>
 
 <details>
-<summary>Formato Flac</summary>
+<summary>Formato FLAC</summary>
 
-FLAC (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][Flac].
-
-</details>
-
-<details>
-<summary>Como instalar extensões</summary>
-
-Verifique como instalar extensões na seção **Softwares de Terceiros**.
-
-> As extensões foram movidas para a estrutura de diretórios de software em ambiente **Linux** na versão **25.05.0**. Workflow não utilizará os binários das extensões disponíveis no `$PATH` do sistema, com exceção das extensões FFmpeg e Flac. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem interferir nos binários instalados via APT e reduzindo a necessidade de elevação de privilégios para a instalação de softwares adicionais.
-
-</details>
-
-<details>
-<summary>Como atualizar extensões</summary>
-
-Verifique como atualizar extensões na seção **Softwares de Terceiros**.
-
-</details>
-
-<details>
-<summary>Como desinstalar extensões</summary>
-
-Verifique como desinstalar extensões na seção **Softwares de Terceiros**.
+FLAC (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
 
 </details>
 
@@ -209,27 +231,6 @@ Verifique como desinstalar extensões na seção **Softwares de Terceiros**.
 ## Configuração
 
 <details>
-<summary>Desabilitar notificações</summary>
-
-Siga para `Configurações` `>` `Notificações`
-
-</details>
-
-<details>
-<summary>Desabilitar o Registro de Eventos</summary>
-
-Siga para `Configurações` `>` `Registro de Eventos` `>` `Estado`
-
-</details>
-
-<details>
-<summary>Alterar período de retenção do Registro de Eventos</summary>
-
-Siga para `Configurações` `>` `Registro de Eventos` `>` `Período de Retenção`
-
-</details>
-
-<details>
 <summary>Exportar hashes de empacotamento</summary>
 
 Habilite o Registro de Eventos para exportar hashes de empacotamento.
@@ -237,7 +238,7 @@ Habilite o Registro de Eventos para exportar hashes de empacotamento.
 </details>
 
 <details>
-<summary>Backup das configurações de software</summary>
+<summary>Exportar as configurações de software</summary>
 
 - Windows
     - Siga para `Configurações` `>` `Gerenciar` `>` `Exportar`
@@ -278,55 +279,27 @@ Habilite o Registro de Eventos para exportar hashes de empacotamento.
 
 </details>
 
-## Registro de Eventos
-
 <details>
-<summary>Coleta de dados</summary>
+<summary>Registro de eventos</summary>
 
 O Registro de Eventos coleta e armazena localmente informações sobre o ambiente, usuário e a execução do software. Esses dados são automaticamente excluídos conforme a Política de Retenção. O usuário pode desativar o Registro de Eventos ou ajustar o período de retenção nas configurações.
 
-</details>
-
-<details>
-<summary>Uso de dados</summary>
-
 Os dados do Registro de Eventos permitem identificar padrões de uso, ajudam a monitorar o desempenho, diagnosticar problemas e manter a cronologia das atividades de software, facilitando a análise retroativa e a recuperação de informações.
-
-</details>
-
-<details>
-<summary>Envio de dados</summary>
 
 Nenhum dado é enviado para a internet.
 
 </details>
 
-## Modo de Reversão
-
 <details>
-<summary>O que é o Modo de Reversão?</summary>
+<summary>Modo de Reversão</summary>
 
-Protege suas configurações ao executar versões anteriores de software. Todas as alterações são descartadas ao encerrar.
-
-</details>
-
-<details>
-<summary>Como ativar o Modo de Reversão?</summary>
-
-Ativado automaticamente ao executar uma versão anterior.
-
-</details>
-
-<details>
-<summary>Como desativar o Modo de Reversão?</summary>
-
-Não é possível desativá-lo manualmente.
+O Modo de Reversão protege suas configurações ao executar versões anteriores de software. Todas as alterações são descartadas ao encerrar. O Modo de Reversão é ativado automaticamente e não é possível desativá-lo manualmente.
 
 </details>
 
 ## Navegação
 
-Uma visão da árvore de menus da versão mais recente de software.
+Uma visão do mapa de menus da versão mais recente de software.
 
 <details>
 <summary>Windows</summary>
@@ -372,25 +345,25 @@ Home
 │   │   │   ├─ Nível de Compressão
 │   │   │   └─ Replicação Automática
 │   │   └─ Conteúdo
-│   │       ├─ Usuário
-│   │       │   ├─ Desktop
-│   │       │   ├─ Documentos
-│   │       │   ├─ Imagens
-│   │       │   ├─ Vídeos
-│   │       │   ├─ Músicas
-│   │       │   ├─ Downloads
-│   │       │   ├─ Vault
-│   │       │   ├─ Projetos
-│   │       │   └─ Softwares
-│   │       └─ Personalizado
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           └─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       └─ Disponível
 │   ├─ Conversão
 │   │   ├─ Diretório de Conversão
+│   │   ├─ Incluir Formatos Adicionais
 │   │   └─ Preservar Originais
 │   ├─ Interface
 │   │   ├─ Cor Primária
@@ -406,16 +379,30 @@ Home
 │   │   ├─ Período de Retenção
 │   │   └─ Exibir
 │   ├─ Extensões
-│   │   ├─ Instalar
-│   │   ├─ Atualizar
-│   │   └─ Desinstalar
+│   │   ├─ 7-Zip
+│   │   │   ├─ Instalar
+│   │   │   ├─ Atualizar
+│   │   │   └─ Desinstalar
+│   │   ├─ WebP
+│   │   │   ├─ Instalar
+│   │   │   ├─ Atualizar
+│   │   │   └─ Desinstalar
+│   │   ├─ FLAC
+│   │   │   ├─ Instalar
+│   │   │   ├─ Atualizar
+│   │   │   └─ Desinstalar
+│   │   └─ FFmpeg
+│   │       ├─ Instalar
+│   │       ├─ Atualizar
+│   │       └─ Desinstalar
 │   ├─ Empacotar
 │   ├─ Gerenciar
 │   │   ├─ Importar
 │   │   ├─ Exportar
 │   │   └─ Redefinir
 │   ├─ Atualizar
-│   │   └─ Estado
+│   │   ├─ Estado
+│   │   └─ Fonte
 │   └─ Desinstalar
 ├─ Sobre
 └─ Encerrar
@@ -457,25 +444,25 @@ Home
 │   │   │   ├─ Nível de Compressão
 │   │   │   └─ Replicação Automática
 │   │   └─ Conteúdo
-│   │       ├─ Usuário
-│   │       │   ├─ Desktop
-│   │       │   ├─ Documentos
-│   │       │   ├─ Imagens
-│   │       │   ├─ Vídeos
-│   │       │   ├─ Músicas
-│   │       │   ├─ Downloads
-│   │       │   ├─ Vault
-│   │       │   ├─ Projetos
-│   │       │   └─ Softwares
-│   │       └─ Personalizado
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           ├─ Disponível
-│   │           └─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       ├─ Disponível
+│   │       └─ Disponível
 │   ├─ Conversão
 │   │   ├─ Diretório de Conversão
+│   │   ├─ Incluir Formatos Adicionais
 │   │   └─ Preservar Originais
 │   ├─ Interface
 │   │   ├─ Cor Primária
@@ -491,16 +478,30 @@ Home
 │   │   ├─ Período de Retenção
 │   │   └─ Exibir
 │   ├─ Extensões
-│   │   ├─ Instalar
-│   │   ├─ Atualizar
-│   │   └─ Desinstalar
+│   │   ├─ 7-Zip
+│   │   │   ├─ Instalar
+│   │   │   ├─ Atualizar
+│   │   │   └─ Desinstalar
+│   │   ├─ WebP
+│   │   │   ├─ Instalar
+│   │   │   ├─ Atualizar
+│   │   │   └─ Desinstalar
+│   │   ├─ FLAC
+│   │   │   ├─ Instalar
+│   │   │   ├─ Atualizar
+│   │   │   └─ Desinstalar
+│   │   └─ FFmpeg
+│   │       ├─ Instalar
+│   │       ├─ Atualizar
+│   │       └─ Desinstalar
 │   ├─ Empacotar
 │   ├─ Gerenciar
 │   │   ├─ Importar
 │   │   ├─ Exportar
 │   │   └─ Redefinir
 │   ├─ Atualizar
-│   │   └─ Estado
+│   │   ├─ Estado
+│   │   └─ Fonte
 │   └─ Desinstalar
 ├─ Sobre
 └─ Encerrar
@@ -599,13 +600,6 @@ Prepare-se para uma jornada emocionante pelo universo do software livre.
 ### Requisitos
 
 <details>
-<summary>Windows: Acesso a Pastas Controladas</summary>
-
-Alguns recursos precisam de acesso a pastas de usuário ou aplicativos. Adicione o PowerShell e o 7-Zip ao Acesso a Pastas Controladas nas configurações de segurança do Windows.
-
-</details>
-
-<details>
 <summary>PowerShell: Como instalar</summary>
 
 - Windows
@@ -620,21 +614,30 @@ Alguns recursos precisam de acesso a pastas de usuário ou aplicativos. Adicione
 
 </details>
 
+<details>
+<summary>Windows: Acesso a Pastas Controladas</summary>
+
+Alguns recursos precisam de acesso a pastas de usuário ou aplicativos. Adicione o PowerShell e o 7-Zip ao Acesso a Pastas Controladas nas configurações de segurança do Windows.
+
+</details>
+
 ### Extensões
 
 <details>
 <summary>Como instalar</summary>
 
-Siga para `Configurações` `>` `Extensões` `>` `Instalar`
+Siga para `Configurações` `>` `Extensões`
 
 > Pode requerer elevação de privilégios
+
+> As extensões foram movidas para a estrutura de diretórios de software em ambiente **Linux** na versão **25.05.0**. Workflow não utilizará os binários das extensões disponíveis no `$PATH` do sistema, com exceção das extensões FFmpeg e FLAC. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem interferir nos binários instalados via APT e reduzindo a necessidade de elevação de privilégios para a instalação de softwares adicionais.
 
 </details>
 
 <details>
 <summary>Como atualizar</summary>
 
-Siga para `Configurações` `>` `Extensões` `>` `Atualizar`
+Siga para `Configurações` `>` `Extensões`
 
 > Pode requerer elevação de privilégios
 
@@ -643,7 +646,7 @@ Siga para `Configurações` `>` `Extensões` `>` `Atualizar`
 <details>
 <summary>Como desinstalar</summary>
 
-Siga para `Configurações` `>` `Extensões` `>` `Desinstalar`
+Siga para `Configurações` `>` `Extensões`
 
 > Pode requerer elevação de privilégios
 
@@ -676,7 +679,7 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
 [Política de Suporte]: /Policies.md
 [7zip]: https://www.7-zip.org/7z.html
 [WebP]: https://developers.google.com/speed/webp
-[Flac]: https://xiph.org/flac/documentation.html
+[FLAC]: https://xiph.org/flac/documentation.html
 [SPDX.org]: https://spdx.org/licenses/GPL-3.0-or-later.html
 [JetBrains Mono]: https://fonts.google.com/specimen/JetBrains+Mono
 [Cascadia Mono]: https://fonts.google.com/specimen/Cascadia+Mono
