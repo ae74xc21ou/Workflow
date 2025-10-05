@@ -42,7 +42,7 @@ Workflow possibilita a integração com extensões de alto nível que operam em 
 
 - **7‑Zip:** Com tecnologia avançada de compressão e descompressão, o 7‑Zip eleva a eficiência do backup de dados e empacotamento de software, otimizando tamanho e performance.
 - **WebP:** Ideal para a conversão de imagens sem perdas, o WebP gera arquivos de alta qualidade em tamanhos compactos, perfeito para web e armazenamento inteligente.
-- **Flac:** Especializado na conversão de áudios sem perdas, o FLAC preserva a fidelidade original enquanto reduz o tamanho dos arquivos, perfeito para backups com fidelidade máxima.
+- **FLAC:** Especializado na conversão de áudios sem perdas, o FLAC preserva a fidelidade original enquanto reduz o tamanho dos arquivos, perfeito para backups com fidelidade máxima.
 - **FFmpeg:** Essencial para processamento multimídia, o FFmpeg facilita a conversão, transcodificação e manipulação de imagens, áudios e vídeos de forma fluida.
 
 Ao possibilitar o acoplamento de extensões, Workflow expande suas funcionalidades para oferecer uma solução completa, versátil e poderosa. Essa abordagem permite que Workflow atenda a uma ampla variedade de necessidades e contextos, proporcionando uma experiência superior para todos os usuários.
@@ -75,11 +75,12 @@ A integração da inteligência artificial impulsionou o desenvolvimento do proj
 
 Workflow é aprimorado continuamente para ampliar a compatibilidade, introduzir novos recursos e refinar funcionalidades, utilizando tecnologias flexíveis, eficientes e robustas, com preferência por soluções de código aberto. Tudo isso mantendo a simplicidade da arquitetura monolítica que reduz a sobrecarga cognitiva, acelera o desenvolvimento e a execução do software.
 
-| Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Crescimento |
+| Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Variação    |
 | :----: | :--------: | :--------: | :-----: | :-----------------: | :-------------: | :---------: |
+| 86     | 25.10.0    | 05/10/2025 | Sim     | x64/ARM64           | Windows/Linux   | +03,59%     |
 | 85     | 25.09.0    | 07/09/2025 | Sim     | x64/ARM64           | Windows/Linux   | +11,46%     |
 | 84     | 25.08.0    | 03/08/2025 | Sim     | x64/ARM64           | Windows/Linux   | +01,06%     |
-| 83     | 25.07.0    | 06/07/2025 | Sim     | x64/ARM64           | Windows/Linux   | -02,82%     |
+| 83     | 25.07.0    | 06/07/2025 | Não     | x64/ARM64           | Windows/Linux   | -02,82%     |
 | 82     | 25.06.1    | 01/06/2025 | Não     | x64/ARM64           | Windows/Linux   | -00,02%     |
 | 81     | 25.06.0    | 01/06/2025 | Não     | x64/ARM64           | Windows/Linux   | -22,16%     |
 | 80     | 25.05.0    | 04/05/2025 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +00,15%     |
@@ -91,7 +92,7 @@ Workflow é aprimorado continuamente para ampliar a compatibilidade, introduzir 
 <details>
 <summary>Mais</summary>
 
-| Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Crescimento |
+| Sprint | Versão     | Data       | Suporte | Arquiteturas        | Sistemas        | Variação    |
 | :----: | :--------: | :--------: | :-----: | :-----------------: | :-------------: | :---------: |
 | 75     | 24.12.1    | 01/12/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +04,27%     |
 | 74     | 24.11.1    | 03/11/2024 | Não     | x86/x64/ARM32/ARM64 | Windows/Linux   | +11,21%     |

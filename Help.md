@@ -186,7 +186,9 @@ Não. Workflow opera em nível de usuário, impedindo que outros acessem seus da
 <details>
 <summary>Formato 7z</summary>
 
-7z é um formato moderno e eficiente que utiliza algoritmos avançados, como o LZMA e o LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida – que agrupa arquivos semelhantes para uma compactação mais otimizada – além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume. Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
+7z é um formato moderno e eficiente que utiliza algoritmos avançados, como LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida, que agrupam arquivos semelhantes para uma compactação mais otimizada, além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume.
+
+Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
 
 </details>
 
@@ -200,7 +202,18 @@ WebP é um formato moderno e versátil que oferece compressão lossless, resulta
 <details>
 <summary>Formato FLAC</summary>
 
-FLAC (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
+FLAC (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo.
+
+Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
+
+</details>
+
+<details>
+<summary>Formato MKV</summary>
+
+MKV (Matroska Video) é um formato multimídia aberto e flexível que suporta múltiplas faixas de vídeo, áudio, legendas e metadados em um único arquivo. Essa versatilidade o torna ideal para arquivamento e distribuição de mídia em alta qualidade, mantendo compatibilidade com uma ampla gama de players e ferramentas de edição.
+
+Utilizado em conjunto com os codecs **VP9** (vídeo) e **FLAC** (áudio), garante alta eficiência de compressão sem perdas visuais e sonoras. O VP9 proporciona excelente relação entre qualidade e tamanho de arquivo em vídeos de alta definição, enquanto o FLAC assegura fidelidade absoluta na reprodução do áudio. Essa combinação oferece uma solução moderna, gratuita e livre de royalties, equilibrando desempenho, qualidade e acessibilidade. [Saiba mais][MKV].
 
 </details>
 
@@ -345,22 +358,22 @@ Home
 │   │   │   ├─ Nível de Compressão
 │   │   │   └─ Replicação Automática
 │   │   └─ Conteúdo
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       └─ Disponível
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       └─ Configurar
 │   ├─ Conversão
 │   │   ├─ Diretório de Conversão
 │   │   ├─ Incluir Formatos Adicionais
@@ -444,22 +457,22 @@ Home
 │   │   │   ├─ Nível de Compressão
 │   │   │   └─ Replicação Automática
 │   │   └─ Conteúdo
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       ├─ Disponível
-│   │       └─ Disponível
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       ├─ Configurar
+│   │       └─ Configurar
 │   ├─ Conversão
 │   │   ├─ Diretório de Conversão
 │   │   ├─ Incluir Formatos Adicionais
@@ -670,7 +683,7 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
         - Clique com o botão direito do mouse no arquivo de fonte
         - Clique em Instalar
     - Método 2
-        - Copie a fonte para o diretório do sistema `sudo cp * /usr/local/share/fonts`
+        - Copie a fonte para o diretório do sistema `sudo cp -r * /usr/local/share/fonts`
         - Atualize o cache de fontes do sistema `sudo fc-cache --force --verbose`
 
 </details>
@@ -680,6 +693,7 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
 [7zip]: https://www.7-zip.org/7z.html
 [WebP]: https://developers.google.com/speed/webp
 [FLAC]: https://xiph.org/flac/documentation.html
+[MKV]: https://www.matroska.org/what_is_matroska.html
 [SPDX.org]: https://spdx.org/licenses/GPL-3.0-or-later.html
 [JetBrains Mono]: https://fonts.google.com/specimen/JetBrains+Mono
 [Cascadia Mono]: https://fonts.google.com/specimen/Cascadia+Mono
