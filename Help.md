@@ -7,7 +7,7 @@ Um guia para instalação e execução de software. Encontre soluções para pro
 <details>
 <summary>O que são fontes</summary>
 
-Fontes são canais de distribuição de software que podem ser remotas ou locais, usadas para instalação e atualização.
+Fontes são canais de distribuição de software que podem ser remotas, locais ou personalizadas, usadas para instalação e atualização.
 
 Permitir a seleção entre fontes é uma estratégia flexível que aumenta a disponibilidade do software, dando aos usuários a opção entre atualização automática e controle local. O recurso atende a cenários de desenvolvimento, produção e emergência e possibilita estratégias híbridas, combinando automação com segurança e redundância para rollback.
 
@@ -16,20 +16,19 @@ Permitir a seleção entre fontes é uma estratégia flexível que aumenta a dis
 <details>
 <summary>Escolher uma fonte</summary>
 
-Ambas as abordagens oferecem vantagens, e a escolha depende da prioridade entre o controle, velocidade e disponibilidade.
+Todas as abordagens oferecem vantagens, e a escolha depende da prioridade entre controle, velocidade e disponibilidade.
 
 - Fonte remota
-    - Atualizações imediatas. Releases são obtidas assim que publicadas no repositório oficial;
-    - Distribuição global. GitHub e CDNs reduzem latência para usuários geograficamente dispersos;
-    - Ideal para usuários que querem sempre a versão mais recente ou integração contínua.
+    - Ideal para usuários que priorizam agilidade e integração contínua.
+    - Distribuição global com menor latência via infraestrutura de CDN;
+    - Acesso imediato a atualizações assim que publicadas no repositório oficial.
 - Fonte local
-    - Funciona offline. Instalações e atualizações sem dependência de rede;
-    - Controle total sobre o software. Útil para builds internos, testes e versões customizadas;
-    - Maior previsibilidade em ambientes isolados ou corporativos;
-    - Rapidez em reinstalações repetidas, sem consumo de banda externa;
-    - Facilita rollback imediato ao manter cópias locais de versões anteriores;
-    - Reduz riscos de disponibilidade por rate limits ou falhas no repositório remoto;
-    - Ideal para air-gapped, QA, ou quando é necessário auditar cada artefato manualmente.
+    - Ideal para ambientes pessoais, isolados ou com restrições de rede;
+    - Operação totalmente offline, sem dependência de conexão com a internet;
+    - Controle total sobre hospedagem, atualizações de software e rollback.
+- Fonte personalizada
+    - Ideal para organizações que buscam independência completa de plataformas públicas;
+    - Controle total sobre o ciclo de desenvolvimento, hospedagem e distribuição conforme políticas internas.
 
 </details>
 
@@ -38,21 +37,20 @@ Ambas as abordagens oferecem vantagens, e a escolha depende da prioridade entre 
 
 - Fonte remota: repositório oficial do projeto no **GitHub**.
 - Fonte local: diretório **Downloads** do usuário local.
-
-> A fonte remota acessa diretamente os arquivos publicados no GitHub, enquanto a fonte local utiliza arquivos previamente baixados para o diretório Downloads do usuário local.
+- Fonte personalizada: Configurável a partir da rede local.
 
 </details>
 
 <details>
-<summary>Provisionar uma fonte local</summary>
+<summary>Provisionar uma fonte</summary>
 
-Provisionar uma fonte local significa preparar os arquivos de instalação ou atualização para que possam ser usados a partir da rede local. O processo consiste em obter os pacotes desejados, armazená-los no local apropriado e garantir que estejam íntegros e prontos para uso.
+Provisionar uma fonte significa preparar os arquivos de instalação e atualização para que possam ser usados a partir de uma fonte local ou personalizada.
 
-- **Obter:** Baixe os **pacotes** de software e o arquivo **Metadata.json** a partir do repositório oficial ou gere uma release interna.
-- **Armazenar:** Copie ou mova os arquivos para o diretório **Downloads** do usuário local, que é o caminho padrão usado para a fonte local.
-- **Validar:** Verifique o hash dos pacotes de software para garantir que não foram corrompidos ou alterados.
-- **Configurar:** No software, ajuste a configuração para usar a fonte local como origem de instalação ou atualização. Em ambientes híbridos, é possível alternar entre fonte remota e local conforme necessário.
-- **Testar:** Execute uma instalação ou atualização de teste para validar que o software está reconhecendo a fonte local e utilizando os arquivos adequadamente.
+- **Obter:** Baixe os **pacotes** de software e o arquivo **Metadata.json** a partir do repositório oficial ou utilize uma versão interna.
+- **Armazenar:** Copie os arquivos para o diretório desejado.
+- **Validar:** Verifique o hash dos pacotes de software para garantir que estejam íntegros.
+- **Configurar:** No software, ajuste a configuração para usar a fonte adequada.
+- **Testar:** Execute uma instalação ou atualização de teste para validar a fonte configurada.
 
 > Mantenha o nome dos arquivos conforme disponibilizado no repositório oficial, para evitar falhas de reconhecimento.
 
@@ -74,12 +72,14 @@ Provisionar uma fonte local significa preparar os arquivos de instalação ou at
     - Abra o PowerShell `pwsh`;
     - Execute `./Workflow.ps1`.
 
-> Ao executar o software pela primeira vez, você precisará escolher uma fonte de instalação. Prefira a fonte **Remota**. Caso opte pela fonte local, verifique como provisionar uma fonte local.
+> Ao executar pela primeira vez, você precisará escolher uma fonte de software. Prefira a fonte **Remota**. Caso contrário, verifique como provisionar uma fonte.
     
 </details>
 
 <details>
 <summary>Como executar</summary>
+
+Após a instalação, você pode usar o atalho criado no diretório do usuário local para executar o software.
 
 - Windows
     - Abra o PowerShell;
@@ -90,14 +90,12 @@ Provisionar uma fonte local significa preparar os arquivos de instalação ou at
     - Navegue até a pasta inicial `Set-Location $Home`;
     - Execute `./Workflow.ps1`.
 
-> Após a instalação, você pode usar o atalho criado no diretório do usuário local para executar o software.
-
 </details>
 
 <details>
 <summary>O software não é instalado automaticamente</summary>
 
-Você está executando uma versão de software sem suporte. Utilize a versão mais recente para prosseguir. Verifique [Evolução][Evolução] e [Política de Suporte][Política de Suporte] para mais informações.
+Você está executando uma versão de software sem suporte ou selecionou uma fonte de software não provisionada. Utilize a versão mais recente e verifique a fonte configurada antes de prosseguir. Verifique [Evolução][Evolução] e [Política de Suporte][Política de Suporte] para mais informações.
 
 </details>
 
@@ -137,13 +135,17 @@ Prossiga conforme a fonte configurada:
     - Mantenha a fonte local provisionada e atualizada adequadamente;
     - Habilite a atualização automática;
     - Execute o software regularmente.
+- Fonte personalizada
+    - Mantenha a fonte personalizada provisionada e atualizada adequadamente;
+    - Habilite a atualização automática;
+    - Execute o software regularmente.
 
 </details>
 
 <details>
 <summary>O software não recebe atualizações automaticamente</summary>
 
-Se o software não foi executado por um longo período e/ou a atualização automática está desabilitada, a versão instalada pode ter perdido suporte e está impossibilitada de receber atualizações. Prossiga com a desinstalação manual e a instalação da versão de software mais recente.
+A fonte de software está configurada incorretamente ou não provisionada; a atualização automática está desabilitada; o software não é executado há muito tempo. Neste cenário a versão instalada pode ter perdido suporte e está impossibilitada de receber atualizações. Prossiga com a desinstalação manual e a instalação da versão de software mais recente. Verifique [Evolução][Evolução] e [Política de Suporte][Política de Suporte] para mais informações.
 
 </details>
 
@@ -435,7 +437,8 @@ Home
 ├─ Conversão
 │   ├─ Pacotes
 │   ├─ Imagens
-│   └─ Áudios
+│   ├─ Áudios
+│   └─ Vídeos
 ├─ Diagnóstico
 │   └─ Relatório da Bateria
 ├─ Manutenção
@@ -524,33 +527,46 @@ Home
 
 ## Estrutura
 
-A estrutura de diretórios de software e backup é projetada para proporcionar a separação lógica dos dados, simplificando a manutenção e escalabilidade. Novos componentes, dispositivos e usuários podem ser facilmente integrados sem perturbar a estrutura existente.
+As estruturas de diretórios do projeto são projetadas para proporcionar a separação lógica dos dados, simplificando a manutenção e escalabilidade. Novos componentes, dispositivos e usuários podem ser facilmente integrados sem perturbar a estrutura existente.
 
 <details>
 <summary>Windows</summary>
 
+### Desenvolvimento
+
+```
+[Usuário] ┐
+          └ Workspace ┐                                                   | Diretório de trabalho
+                      └ Workflow ┐                                        | Diretório de projeto
+                                 ├ [Year] ┐                               | Diretório de controle
+                                 │        └ [Release] ┐                   | Diretório de controle
+                                 │                    ├ Repository        | Arquivos do repositório
+                                 │                    └ Software          | Arquivos de software
+                                 └ Management                             | Documentação técnica
+```
+
 ### Software
 
 ```
-[Usuário] ─┐
-           └─ AppData ─┐
-                       └─ Local ─┐
-                                 └─ DC ─┐                                 | Diretório raiz
-                                        └─ Workflow ─┐                    | Diretório de instalação
-                                                     ├─ Software          | Diretório de software
-                                                     ├─ Extensions        | Diretório de extensões
-                                                     ├─ Events            | Diretório de registro de eventos
-                                                     └─ Cache             | Diretório de armazenamento temporário
+[Usuário] ┐
+          └ AppData ┐
+                    └ Local ┐
+                            └ DC ┐                                        | Diretório raiz
+                                 └ Workflow ┐                             | Diretório de instalação
+                                            ├ Software                    | Arquivos de software
+                                            ├ Extensions                  | Arquivos de extensões
+                                            ├ Events                      | Arquivos de eventos
+                                            └ Cache                       | Arquivos temporários
 ```
 
 ### Backup
 
 ```
-[Drive] ─┐
-         └─ Workflow ─┐                                                   | Diretório raiz
-                      └─ [Dispositivo] ─┐                                 | Diretório de controle
-                                        └─ [Usuário] ─┐                   | Diretório de controle
-                                                      └─ {+}              | Dados
+[Configurável] ┐                                                          | Diretório raiz
+               └ Workflow ┐                                               | Diretório de armazenamento
+                          └ [Dispositivo] ┐                               | Diretório de controle
+                                          └ [Usuário] ┐                   | Diretório de controle
+                                                      └ {+}               | Dados
 ```
 
 </details>
@@ -558,26 +574,39 @@ A estrutura de diretórios de software e backup é projetada para proporcionar a
 <details>
 <summary>Linux</summary>
 
+### Desenvolvimento
+
+```
+[Usuário] ┐
+          └ Workspace ┐                                                   | Diretório de trabalho
+                      └ Workflow ┐                                        | Diretório de projeto
+                                 ├ [Year] ┐                               | Diretório de controle
+                                 │        └ [Release] ┐                   | Diretório de controle
+                                 │                    ├ Repository        | Arquivos do repositório
+                                 │                    └ Software          | Arquivos de software
+                                 └ Management                             | Documentação técnica
+```
+
 ### Software
 
 ```
-[Usuário] ─┐
-           └─ .DC ─┐                                                      | Diretório raiz
-                   └─ Workflow ─┐                                         | Diretório de instalação
-                                ├─ Software                               | Diretório de software
-                                ├─ Extensions                             | Diretório de extensões
-                                ├─ Events                                 | Diretório de registro de eventos
-                                └─ Cache                                  | Diretório de armazenamento temporário
+[Usuário] ┐
+          └ .DC ┐                                                         | Diretório raiz
+                └ Workflow ┐                                              | Diretório de instalação
+                           ├ Software                                     | Arquivos de software
+                           ├ Extensions                                   | Arquivos de extensões
+                           ├ Events                                       | Arquivos de eventos
+                           └ Cache                                        | Arquivos temporários
 ```
 
 ### Backup
 
 ```
-[Drive] ─┐
-         └─ Workflow ─┐                                                   | Diretório raiz
-                      └─ [Dispositivo] ─┐                                 | Diretório de controle
-                                        └─ [Usuário] ─┐                   | Diretório de controle
-                                                      └─ {+}              | Dados
+[Configurável] ┐                                                          | Diretório raiz
+               └ Workflow ┐                                               | Diretório de armazenamento
+                          └ [Dispositivo] ┐                               | Diretório de controle
+                                          └ [Usuário] ┐                   | Diretório de controle
+                                                      └ {+}               | Dados
 ```
 
 </details>
@@ -608,7 +637,7 @@ Prepare-se para uma jornada emocionante pelo universo do software livre.
 
 </details>
 
-## Softwares de terceiros
+## Softwares de Terceiros
 
 ### Requisitos
 

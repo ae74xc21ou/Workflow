@@ -1,27 +1,21 @@
 # Políticas
 
-Encontre informações sobre as políticas de suporte, atualização e ciclo de vida do software. Isso inclui informações detalhadas sobre o fornecimento de suporte e a gestão das atualizações de software.
+As políticas definem como o suporte, as atualizações e o ciclo de vida de software são gerenciados.
 
 ## Política de Suporte
 
-O suporte ao software abrange a instalação, atualização, uso e remoção do software por meio da documentação disponível.
+O suporte cobre instalação, atualização, uso e remoção do software, conforme a documentação oficial.
 
 ## Política de Atualização
 
-Novas versões de software são lançadas periodicamente, incluindo correções de erros, melhorias de compatibilidade, estabilidade, desempenho e novos recursos.
+Novas versões periódicas trazem correções, melhorias e novos recursos. Manter o software atualizado garante compatibilidade e segurança.
 
 ## Política de Ciclo de Vida
 
-O suporte e a garantia de atualização de software estão limitados aos três lançamentos recentes. Caso o software seja descontinuado, o suporte e atualizações serão mantido por 30 dias após o encerramento do desenvolvimento. Além desse período, não haverá novas atualizações ou correções, tornando o software suscetível a erros, instabilidades e incompatibilidades.
+O suporte cobre as **três versões mais recentes**. Se o desenvolvimento for encerrado, o suporte e as atualizações continuam por **30 dias**. Após esse período, não haverá novas versões nem correções.
 
-Workflow é executado em vários sistemas operacionais e arquiteturas. O suporte ao Workflow termina quando qualquer uma das seguintes condições é atendida:
-- O sistema operacional ou shell atinge o fim da vida útil, conforme definido pelo proprietário da plataforma
-- A versão específica de Workflow atinge o fim da vida útil
+O suporte a softwares de terceiros termina junto com o fim do seu ciclo de vida. Depois disso, nenhuma manutenção será fornecida. Recomenda-se migrar para uma versão suportada.
 
-Após uma versão de Workflow atingir o fim da vida útil, nenhuma atualização adicional, incluindo atualizações de segurança, será fornecida. É recomendado atualizar para continuar recebendo atualizações e suporte.
+> O estado de desenvolvimento e suporte é exibido no software.
 
-> [!TIP]
-> Alterações no status de desenvolvimento do software serão exibidas no software e no repositório.
-
-> [!IMPORTANT]
-> Projetos legados, softwares descontinuados e versões de software sem suporte podem ser removidos após o término do seu ciclo de vida.
+> Versões legadas podem ser removidas após o fim do ciclo de vida.
