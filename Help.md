@@ -2,10 +2,12 @@
 
 Um guia para instalação e execução de software. Encontre soluções para problemas comuns, instruções de atualização, configuração e dicas para o uso de funcionalildades.
 
-## Fontes
+## Primeiros Passos
+
+### Fontes
 
 <details>
-<summary>O que são fontes</summary>
+<summary>O que são Fontes</summary>
 
 Fontes são canais de distribuição de software que podem ser remotas, locais ou personalizadas, usadas para instalação e atualização.
 
@@ -14,7 +16,7 @@ Permitir a seleção entre fontes é uma estratégia flexível que aumenta a dis
 </details>
 
 <details>
-<summary>Escolher uma fonte</summary>
+<summary>Escolher uma Fonte</summary>
 
 Todas as abordagens oferecem vantagens, e a escolha depende da prioridade entre controle, velocidade e disponibilidade.
 
@@ -33,7 +35,7 @@ Todas as abordagens oferecem vantagens, e a escolha depende da prioridade entre 
 </details>
 
 <details>
-<summary>Locais das fontes</summary>
+<summary>Locais das Fontes</summary>
 
 - Fonte remota: repositório oficial do projeto no **GitHub**.
 - Fonte local: diretório **Downloads** do usuário local.
@@ -42,7 +44,7 @@ Todas as abordagens oferecem vantagens, e a escolha depende da prioridade entre 
 </details>
 
 <details>
-<summary>Provisionar uma fonte</summary>
+<summary>Provisionar uma Fonte</summary>
 
 Provisionar uma fonte significa preparar os arquivos de instalação e atualização para que possam ser usados a partir de uma fonte local ou personalizada.
 
@@ -56,10 +58,10 @@ Provisionar uma fonte significa preparar os arquivos de instalação e atualiza�
 
 </details>
 
-## Instalação
+### Instalação
 
 <details>
-<summary>Como instalar</summary>
+<summary>Como Instalar</summary>
 
 - Windows
     - Baixe e descomprima o pacote;
@@ -77,7 +79,7 @@ Provisionar uma fonte significa preparar os arquivos de instalação e atualiza�
 </details>
 
 <details>
-<summary>Como executar</summary>
+<summary>Como Executar</summary>
 
 Após a instalação, você pode usar o atalho criado no diretório do usuário local para executar o software.
 
@@ -93,37 +95,30 @@ Após a instalação, você pode usar o atalho criado no diretório do usuário 
 </details>
 
 <details>
-<summary>O software não é instalado automaticamente</summary>
-
-Você está executando uma versão de software sem suporte ou selecionou uma fonte de software não provisionada. Utilize a versão mais recente e verifique a fonte configurada antes de prosseguir. Verifique [Evolução][Evolução] e [Política de Suporte][Política de Suporte] para mais informações.
-
-</details>
-
-<details>
-<summary>Atalho ausente no diretório do usuário</summary>
-
-Se o atalho `Workflow.ps1` estiver ausente no diretório `$Home` após a instalação, verifique o tópico **Acesso a Pastas Controladas** na seção **Software de Terceiros**. Em seguida execute Workflow manualmente a partir do diretório de instalação de software. O atalho será recriado automaticamente. Verifique a seção **Estrutura** para mais informações.
-
-</details>
-
-<details>
-<summary>Notificação de incompatibilidade ao instalar</summary>
-
-O software verifica diversas informações do ambiente para garantir que seja executado em um cenário mínimo de compatibilidade. Verifique os requisitos de sistema na página de download e tente novamente após resolver a incompatibilidade.
-
-</details>
-
-<details>
-<summary>Como desinstalar</summary>
+<summary>Como Desinstalar</summary>
 
 Siga para `Configurações` `>` `Desinstalar`.
 
 </details>
 
-## Atualização
+<details>
+<summary>O Software não é Instalado Automaticamente</summary>
+
+Você está executando uma versão de software sem suporte ou selecionou uma fonte de software não provisionada. Utilize a versão mais recente e verifique a fonte configurada antes de prosseguir. Verifique [Política de Suporte][Política de Suporte] para mais informações.
+
+</details>
 
 <details>
-<summary>Como manter o software atualizado</summary>
+<summary>Atalho Ausente no Diretório do Usuário</summary>
+
+Caso o atalho `Workflow.ps1` esteja ausente no diretório `$Home`, verifique o tópico **Acesso a Pastas Controladas** na seção **Software de Terceiros**. Em seguida execute Workflow manualmente a partir do diretório de instalação de software `%UserProfile%\AppData\Local\DC\Workflow\Software` para que o atalho seja recriado automaticamente.
+
+</details>
+
+### Atualização
+
+<details>
+<summary>Como Atualizar</summary>
 
 Prossiga conforme a fonte configurada:
 
@@ -143,83 +138,127 @@ Prossiga conforme a fonte configurada:
 </details>
 
 <details>
-<summary>O software não recebe atualizações automaticamente</summary>
+<summary>O Software não Recebe Atualizações Automaticamente</summary>
 
 A fonte de software está configurada incorretamente ou não provisionada; a atualização automática está desabilitada; o software não é executado há muito tempo. Neste cenário a versão instalada pode ter perdido suporte e está impossibilitada de receber atualizações. Prossiga com a desinstalação manual e a instalação da versão de software mais recente. Verifique [Evolução][Evolução] e [Política de Suporte][Política de Suporte] para mais informações.
 
 </details>
 
-<details>
-<summary>Notificação de incompatibilidade após atualizar</summary>
+## Fluxos
 
-Verifique os requisitos de sistema na página de download e tente novamente após resolver a incompatibilidade.
+### Backup
+
+<details>
+<summary>Multidispositivos e Multiusuários</summary>
+
+O suporte a multidispositivos e multiusuários de Workflow permite armazenar backups de vários dispositivos e usuários na mesma estrutura de backup.
+
+Workflow opera em nível de usuário, impedindo que outros acessem seus dados locais. No entanto, o backup de dados não é criptografado. É importante garantir que os diretórios de backup e réplica sejam armazenados de forma segura para proteger seus dados contra acesso não autorizado.
+
+```
+[Configurável] ┐                                                           | Diretório de backup/replica
+               └ Workflow ┐                                                | Diretório de armazenamento
+                          └ [Dispositivo] ┐                                | Diretório de controle
+                                          └ [Usuário] ┐                    | Diretório de controle
+                                                      └ {+}                | Dados
+```
 
 </details>
 
 <details>
-<summary>Erro de integridade comprometida</summary>
+<summary>Período de Retenção</summary>
 
-O erro de integridade pode ocorrer em diferentes contextos e resulta nos seguintes efeitos:
+O Período de Retenção define por quanto tempo os arquivos de backup e réplica serão mantidos. Após esse período, Workflow remove automaticamente os itens mais antigos, preservando apenas os arquivos dentro da janela configurada.
 
-- **Instalação ou atualização de software:** pacotes inválidos não serão aplicados.
-- **Alteração ilegal no algoritmo:** a integridade de software é restaurada automaticamente.
-- **Alterações indevidas no arquivo de backup:** você será notificado e poderá realizar o backup novamente.
-
-</details>
-
-## Backup
-
-<details>
-<summary>O que é suporte a multidispositivos e multiusuários?</summary>
-
-Permite adicionar backups de vários dispositivos e usuários na mesma estrutura de backup.
+Esse recurso mantém o diretório de armazenamento organizado, evita acúmulo desnecessário de dados e ajuda a controlar o uso de espaço em disco. O usuário pode ajustar o período conforme sua estratégia de backup, capacidade de armazenamento e necessidade de histórico.
 
 </details>
 
 <details>
-<summary>Outro usuário pode fazer backup dos meus dados?</summary>
+<summary>Níveis de Compressão</summary>
 
-Não. Workflow opera em nível de usuário, impedindo que outros acessem seus dados locais. No entanto, observe que o backup de dados não é criptografado. É importante garantir que os drives de backup e réplica sejam armazenados de forma segura para proteger seus dados contra acesso não autorizado.
+Os níveis de compressão definem o equilíbrio entre desempenho e eficiência no tamanho do arquivo final. Workflow utiliza o algoritmo **LZMA2** e ajusta automaticamente o uso de memória e o nível de análise conforme a configuração selecionada.
 
-</details>
+- **Nível Mínimo:** Prioriza velocidade e baixo consumo de memória. O processamento é rápido e o impacto no sistema é mínimo, mas o tamanho final do backup é maior.
+- **Níveis Baixo e Médio:** Oferecem um equilíbrio adequado entre tempo de processamento, uso de recursos e redução do tamanho do arquivo. Recomendados para a maioria dos cenários.
+- **Níveis Alto e Máximo:** Utilizam mais memória e exigem maior tempo de processamento para obter a melhor taxa de compactação possível. Adequados para dispositivos com maior capacidade ou backups de grande volume.
 
-## Conversão
+Durante a compressão, Workflow ajusta automaticamente:
 
-<details>
-<summary>Formato 7z</summary>
+- Intensidade da compressão.
+- Consumo de memória proporcional ao nível selecionado.
+- Pofundidade da análise de dados.
 
-7z é um formato moderno e eficiente que utiliza algoritmos avançados, como LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida, que agrupam arquivos semelhantes para uma compactação mais otimizada, além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume.
-
-Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
-
-</details>
-
-<details>
-<summary>Formato WebP</summary>
-
-WebP é um formato moderno e versátil que oferece compressão lossless, resultando em arquivos menores sem perda de qualidade. Suporta transparência e animações, substituindo de forma eficiente formatos tradicionais como BMP, TIFF, PNG e JPEG. Por ser um formato aberto e gratuito, não há custos com licenciamento ou royalties. Além disso, seu amplo suporte em sistemas operacionais, navegadores e ferramentas de edição o torna uma escolha inteligente em comparação com formatos mais recentes. [Saiba mais][WebP].
+Essa combinação garante resultados consistentes, permitindo ao usuário escolher entre velocidade, economia de recursos ou máxima compactação conforme a necessidade.
 
 </details>
 
 <details>
-<summary>Formato FLAC</summary>
+<summary>Replicação Automática</summary>
 
-FLAC (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo.
+A Replicação Automática copia os arquivos de backups para o diretório de réplica configurado, garantindo uma segunda cópia dos dados sem intervenção do usuário. Quando habilitada, a replicação ocorre imediatamente após o término do processo de backup.
 
-Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
+Esse recurso reduz riscos de perda de dados ao manter uma cópia adicional em um local independente do diretório de backup. A execução é totalmente automatizada e não exige agendamento, tornando a proteção dos dados contínua e previsível.
+
+</details>
+
+### Conversão
+
+<details>
+<summary>Pacotes</summary>
+
+- **Formatos de Entrada:** `.tar.gz`, `.tar.bz2`, `.tar.xz`, `.tar.zst`, `.tar`, `.zip`, `.rar`
+
+- **Formato de Saída:** `7z` é um formato moderno e eficiente que utiliza algoritmos avançados, como LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida, que agrupam arquivos semelhantes para uma compactação mais otimizada, além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume. Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
 
 </details>
 
 <details>
-<summary>Formato MKV</summary>
+<summary>Imagens</summary>
 
-MKV (Matroska Video) é um formato multimídia aberto e flexível que suporta múltiplas faixas de vídeo, áudio, legendas e metadados em um único arquivo. Essa versatilidade o torna ideal para arquivamento e distribuição de mídia em alta qualidade, mantendo compatibilidade com uma ampla gama de players e ferramentas de edição.
+- **Formatos de Entrada:** `.jpg`, `.jpeg`, `.tif`, `.tiff`, `.png`, `.bmp`
 
-Utilizado em conjunto com os codecs **VP9** (vídeo) e **FLAC** (áudio), garante alta eficiência de compressão sem perdas visuais e sonoras. O VP9 proporciona excelente relação entre qualidade e tamanho de arquivo em vídeos de alta definição, enquanto o FLAC assegura fidelidade absoluta na reprodução do áudio. Essa combinação oferece uma solução moderna, gratuita e livre de royalties, equilibrando desempenho, qualidade e acessibilidade. [Saiba mais][MKV].
+- **Formato de Saída:** `WebP` é um formato moderno e versátil que oferece compressão lossless, resultando em arquivos menores sem perda de qualidade. Suporta transparência e animações, substituindo de forma eficiente formatos tradicionais como BMP, TIFF, PNG e JPEG. Por ser um formato aberto e gratuito, não há custos com licenciamento ou royalties. Além disso, seu amplo suporte em sistemas operacionais, navegadores e ferramentas de edição o torna uma escolha inteligente em comparação com formatos mais recentes. [Saiba mais][WebP].
 
 </details>
 
-## Manutenção
+<details>
+<summary>Áudios</summary>
+
+- **Formatos de Entrada:** `.raw`, `.wav`, `.aif`, `.aiff`, `.mp3`, `.aac`, `.wma`, `.m4a`
+
+- **Formato de Saída:** `FLAC` (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
+
+</details>
+
+<details>
+<summary>Vídeos</summary>
+
+- **Formatos de Entrada:** `.mov`, `.avi`, `.mpg`, `.wmv`, `.mp4`
+
+- **Formato de Saída:** `MKV` (Matroska Video) é um formato multimídia aberto e flexível que suporta múltiplas faixas de vídeo, áudio, legendas e metadados em um único arquivo. Essa versatilidade o torna ideal para arquivamento e distribuição de mídia em alta qualidade, mantendo compatibilidade com uma ampla gama de players e ferramentas de edição. Utilizado em conjunto com os codecs **VP9** (vídeo) e **FLAC** (áudio), garante alta eficiência de compressão sem perdas visuais e sonoras. O VP9 proporciona excelente relação entre qualidade e tamanho de arquivo em vídeos de alta definição, enquanto o FLAC assegura fidelidade absoluta na reprodução do áudio. Essa combinação oferece uma solução moderna, gratuita e livre de royalties, equilibrando desempenho, qualidade e acessibilidade. [Saiba mais][MKV].
+
+</details>
+
+<details>
+<summary>Limite de Processamento</summary>
+
+O Limite de Processamento define quantos arquivos serão convertidos em uma única execução. Quando o número de itens disponíveis excede o limite configurado, apenas os primeiros arquivos são processados e a conversão é encerrada ao atingir o limite. Os demais itens permanecem disponíveis para conversão, permitindo que o usuário inicie uma nova execução posteriormente.
+
+Esse recurso evita operações excessivamente longas em cenários com grande volume de arquivos e oferece maior previsibilidade no tempo de execução, permitindo ao usuário ajustar o limite conforme sua rotina e capacidade do dispositivo.
+
+</details>
+
+<details>
+<summary>Preservar Originais</summary>
+
+Quando habilitada, a opção Preservar Originais mantém os arquivos de entrada no diretório de conversão após a conclusão do processo. Workflow não remove o conteúdo original automaticamente, permitindo que o usuário decida quando e como descartá-lo.
+
+Essa opção é útil se você prefere revisar o resultado da conversão antes de excluir os arquivos originais ou para cenários em que é necessário manter uma cópia intacta dos dados de entrada.
+
+</details>
+
+### Manutenção
 
 <details>
 <summary>Verificar Imagem do Sistema</summary>
@@ -243,59 +282,12 @@ Utilizado em conjunto com os codecs **VP9** (vídeo) e **FLAC** (áudio), garant
 
 </details>
 
-## Configuração
+## Configurações
+
+### Monitoramento
 
 <details>
-<summary>Exportar hashes de empacotamento</summary>
-
-Habilite o Registro de Eventos para exportar hashes de empacotamento.
-
-</details>
-
-<details>
-<summary>Exportar as configurações de software</summary>
-
-- Windows
-    - Siga para `Configurações` `>` `Gerenciar` `>` `Exportar`
-    - Utilize `WIN+R` e acesse `%UserProfile%\Downloads`
-    - Faça backup de `WorkflowSettingsBackup.json`
-- Linux
-    - Siga para `Configurações` `>` `Gerenciar` `>` `Exportar`
-    - Utilize `ALT+F2` e acesse `~/Downloads`
-    - Faça backup de `WorkflowSettingsBackup.json`
-
-</details>
-
-<details>
-<summary>Transferir configurações para um novo dispositivo</summary>
-
-- Windows
-    - No dispositivo antigo:
-        - Siga para `Configurações` `>` `Gerenciar` `>` `Exportar`
-        - Utilize `WIN+R` e acesse `%UserProfile%\Downloads`
-        - Copie o arquivo `WorkflowSettingsBackup.json`
-    - No dispositivo novo:
-        - Instale o software
-        - Utilize `WIN+R` e acesse `%UserProfile%\Downloads`
-        - Cole o arquivo `WorkflowSettingsBackup.json`
-        - Siga para `Configurações` `>` `Gerenciar` `>` `Importar`
-- Linux
-    - No dispositivo antigo:
-        - Siga para `Configurações` `>` `Gerenciar` `>` `Exportar`
-        - Utilize `ALT+F2` e acesse `~/Downloads`
-        - Copie o arquivo `WorkflowSettingsBackup.json`
-    - No dispositivo novo:
-        - Instale o software
-        - Utilize `ALT+F2` e acesse `~/Downloads`
-        - Cole o arquivo `WorkflowSettingsBackup.json`
-        - Siga para `Configurações` `>` `Gerenciar` `>` `Importar`
-
-> Informações de identificação e segurança não podem ser transferidas.
-
-</details>
-
-<details>
-<summary>Registro de eventos</summary>
+<summary>Eventos</summary>
 
 O Registro de Eventos coleta e armazena localmente informações sobre o ambiente, usuário e a execução do software. Esses dados são automaticamente excluídos conforme a Política de Retenção. O usuário pode desativar o Registro de Eventos ou ajustar o período de retenção nas configurações.
 
@@ -306,334 +298,83 @@ Nenhum dado é enviado para a internet.
 </details>
 
 <details>
-<summary>Modo de Reversão</summary>
+<summary>Bateria</summary>
+
+A Verificação de Bateria impede a execução de funcionalidades que demandam maior poder de processamento quando o nível atual estiver abaixo do valor configurado. Quando essa condição é identificada, a execução é interrompida e o usuário pode autorizar manualmente a continuidade, garantindo maior segurança em dispositivos móveis ou com baixo nível de bateria.
+
+Esse controle evita interrupções inesperadas e protege a integridade das operações, especialmente em fluxos que exigem tempo prolongado de execução ou uso intensivo de recursos. O nível pode ser configurado conforme a necessidade do usuário e o perfil de uso do dispositivo.
+
+</details>
+
+### Segurança
+
+<details>
+<summary>Integridade</summary>
+
+A Verificação de Integridade monitora a integridade de software, atualizações e backups com o uso de funções de hash criptográficas, garantindo operações de software confiáveis e seguras.
+
+</details>
+
+<details>
+<summary>Sentinela</summary>
+
+A Verificação de Sentinela monitora arquivos críticos com o uso de identificadores únicos globais e funções de hash criptográficas, detectando e isolando inconsistências ou corrupções.
+
+</details>
+
+<details>
+<summary>Autorização</summary>
+
+A Solicitação de Autorização exige confirmação explícita do usuário ao executar operações críticas, como uso intensivo de recursos, ou alteração de estados de software, evitando que mudanças relevantes ocorram sem supervisão direta.
+
+</details>
+
+### Manutenção
+
+<details>
+<summary>Exportar as Configurações de Software</summary>
+
+- Windows
+    - Siga para `Configurações` `>` `Manutenção` `>` `Exportar`
+    - Utilize `WIN+R` e acesse `%UserProfile%\Downloads`
+    - Faça backup de `WorkflowSettingsBackup.json`
+- Linux
+    - Siga para `Configurações` `>` `Manutenção` `>` `Exportar`
+    - Utilize `ALT+F2` e acesse `~/Downloads`
+    - Faça backup de `WorkflowSettingsBackup.json`
+
+</details>
+
+<details>
+<summary>Transferir as Configurações de Software</summary>
+
+- Windows
+    - No dispositivo antigo:
+        - Siga as instruções do tópico **Exportar as Configurações de Software**
+    - No dispositivo novo:
+        - Instale o software
+        - Utilize `WIN+R` e acesse `%UserProfile%\Downloads`
+        - Cole o arquivo `WorkflowSettingsBackup.json`
+        - Siga para `Configurações` `>` `Manutenção` `>` `Importar`
+- Linux
+    - No dispositivo antigo:
+        - Siga as instruções do tópico **Exportar as Configurações de Software**
+    - No dispositivo novo:
+        - Instale o software
+        - Utilize `ALT+F2` e acesse `~/Downloads`
+        - Cole o arquivo `WorkflowSettingsBackup.json`
+        - Siga para `Configurações` `>` `Manutenção` `>` `Importar`
+
+> Informações de identificação e segurança não podem ser transferidas.
+
+</details>
+
+## Modos
+
+<details>
+<summary>Reversão</summary>
 
 O Modo de Reversão protege suas configurações ao executar versões anteriores de software. Todas as alterações são descartadas ao encerrar. O Modo de Reversão é ativado automaticamente e não é possível desativá-lo manualmente.
-
-</details>
-
-## Navegação
-
-Uma visão do mapa de menus da versão mais recente de software.
-
-<details>
-<summary>Windows</summary>
-
-```
-Home
-├─ Backup
-│   ├─ Iniciar
-│   ├─ Replicar
-│   └─ Restaurar
-├─ Conversão
-│   └─ Pacotes
-├─ Diagnóstico
-│   ├─ Relatório da Bateria
-│   ├─ Verificar Saúde do Drive
-│   └─ Verificar Sistema de Arquivos
-├─ Manutenção
-│   ├─ Gerenciar Aplicativos
-│   │   ├─ Listar
-│   │   ├─ Atualizar
-│   │   ├─ Importar
-│   │   └─ Exportar
-│   ├─ Desfragmentar
-│   │   ├─ Analisar
-│   │   ├─ Otimizar
-│   │   └─ Trim
-│   ├─ Gerenciar Administrador
-│   │   ├─ Ativar
-│   │   └─ Desativar
-│   ├─ Verificar Imagem do Sistema
-│   │   ├─ Verificar
-│   │   └─ Reparar
-│   └─ Verificar Instalação do Sistema
-│       ├─ Verificar
-│       └─ Consolidar
-├─ Configurações
-│   ├─ Backup
-│   │   ├─ Parâmetros
-│   │   │   ├─ Diretório de Backup
-│   │   │   ├─ Diretório de Réplica
-│   │   │   ├─ Diretório de Restauração
-│   │   │   ├─ Período de Retenção
-│   │   │   ├─ Nível de Compressão
-│   │   │   └─ Replicação Automática
-│   │   └─ Conteúdo
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       └─ Configurar
-│   ├─ Conversão
-│   │   ├─ Diretório de Conversão
-│   │   ├─ Incluir Formatos Adicionais
-│   │   └─ Preservar Originais
-│   ├─ Interface
-│   │   ├─ Cor Primária
-│   │   └─ Cor Secundária
-│   ├─ Notificações
-│   │   ├─ Software
-│   │   ├─ Backup
-│   │   ├─ Conversão
-│   │   ├─ Diagnóstico
-│   │   └─ Manutenção
-│   ├─ Registro de Eventos
-│   │   ├─ Estado
-│   │   ├─ Período de Retenção
-│   │   └─ Exibir
-│   ├─ Extensões
-│   │   ├─ 7-Zip
-│   │   │   ├─ Instalar
-│   │   │   ├─ Atualizar
-│   │   │   └─ Desinstalar
-│   │   ├─ WebP
-│   │   │   ├─ Instalar
-│   │   │   ├─ Atualizar
-│   │   │   └─ Desinstalar
-│   │   ├─ FLAC
-│   │   │   ├─ Instalar
-│   │   │   ├─ Atualizar
-│   │   │   └─ Desinstalar
-│   │   └─ FFmpeg
-│   │       ├─ Instalar
-│   │       ├─ Atualizar
-│   │       └─ Desinstalar
-│   ├─ Empacotar
-│   ├─ Gerenciar
-│   │   ├─ Importar
-│   │   ├─ Exportar
-│   │   └─ Redefinir
-│   ├─ Atualizar
-│   │   ├─ Estado
-│   │   └─ Fonte
-│   └─ Desinstalar
-├─ Sobre
-└─ Encerrar
-```
-
-</details>
-
-<details>
-<summary>Linux</summary>
-
-```
-Home
-├─ Backup
-│   ├─ Iniciar
-│   ├─ Replicar
-│   └─ Restaurar
-├─ Conversão
-│   ├─ Pacotes
-│   ├─ Imagens
-│   ├─ Áudios
-│   └─ Vídeos
-├─ Diagnóstico
-│   └─ Relatório da Bateria
-├─ Manutenção
-│   ├─ Gerenciar Aplicativos
-│   │   ├─ Listar
-│   │   ├─ Atualizar
-│   │   └─ Exportar
-│   └─ Desfragmentar
-│       ├─ Analisar
-│       ├─ Otimizar
-│       └─ Trim
-├─ Configurações
-│   ├─ Backup
-│   │   ├─ Parâmetros
-│   │   │   ├─ Diretório de Backup
-│   │   │   ├─ Diretório de Réplica
-│   │   │   ├─ Diretório de Restauração
-│   │   │   ├─ Período de Retenção
-│   │   │   ├─ Nível de Compressão
-│   │   │   └─ Replicação Automática
-│   │   └─ Conteúdo
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       ├─ Configurar
-│   │       └─ Configurar
-│   ├─ Conversão
-│   │   ├─ Diretório de Conversão
-│   │   ├─ Incluir Formatos Adicionais
-│   │   └─ Preservar Originais
-│   ├─ Interface
-│   │   ├─ Cor Primária
-│   │   └─ Cor Secundária
-│   ├─ Notificações
-│   │   ├─ Software
-│   │   ├─ Backup
-│   │   ├─ Conversão
-│   │   ├─ Diagnóstico
-│   │   └─ Manutenção
-│   ├─ Registro de Eventos
-│   │   ├─ Estado
-│   │   ├─ Período de Retenção
-│   │   └─ Exibir
-│   ├─ Extensões
-│   │   ├─ 7-Zip
-│   │   │   ├─ Instalar
-│   │   │   ├─ Atualizar
-│   │   │   └─ Desinstalar
-│   │   ├─ WebP
-│   │   │   ├─ Instalar
-│   │   │   ├─ Atualizar
-│   │   │   └─ Desinstalar
-│   │   ├─ FLAC
-│   │   │   ├─ Instalar
-│   │   │   ├─ Atualizar
-│   │   │   └─ Desinstalar
-│   │   └─ FFmpeg
-│   │       ├─ Instalar
-│   │       ├─ Atualizar
-│   │       └─ Desinstalar
-│   ├─ Empacotar
-│   ├─ Gerenciar
-│   │   ├─ Importar
-│   │   ├─ Exportar
-│   │   └─ Redefinir
-│   ├─ Atualizar
-│   │   ├─ Estado
-│   │   └─ Fonte
-│   └─ Desinstalar
-├─ Sobre
-└─ Encerrar
-```
-
-</details>
-
-## Estrutura
-
-As estruturas de diretórios do projeto são projetadas para proporcionar a separação lógica dos dados, simplificando a manutenção e escalabilidade. Novos componentes, dispositivos e usuários podem ser facilmente integrados sem perturbar a estrutura existente.
-
-<details>
-<summary>Windows</summary>
-
-### Desenvolvimento
-
-```
-[Usuário] ┐
-          └ Workspace ┐                                                   | Diretório de trabalho
-                      └ Workflow ┐                                        | Diretório de projeto
-                                 ├ [Year] ┐                               | Diretório de controle
-                                 │        └ [Release] ┐                   | Diretório de controle
-                                 │                    ├ Repository        | Arquivos do repositório
-                                 │                    └ Software          | Arquivos de software
-                                 └ Management                             | Documentação técnica
-```
-
-### Software
-
-```
-[Usuário] ┐
-          └ AppData ┐
-                    └ Local ┐
-                            └ DC ┐                                        | Diretório raiz
-                                 └ Workflow ┐                             | Diretório de instalação
-                                            ├ Software                    | Arquivos de software
-                                            ├ Extensions                  | Arquivos de extensões
-                                            ├ Events                      | Arquivos de eventos
-                                            └ Cache                       | Arquivos temporários
-```
-
-### Backup
-
-```
-[Configurável] ┐                                                          | Diretório raiz
-               └ Workflow ┐                                               | Diretório de armazenamento
-                          └ [Dispositivo] ┐                               | Diretório de controle
-                                          └ [Usuário] ┐                   | Diretório de controle
-                                                      └ {+}               | Dados
-```
-
-</details>
-
-<details>
-<summary>Linux</summary>
-
-### Desenvolvimento
-
-```
-[Usuário] ┐
-          └ Workspace ┐                                                   | Diretório de trabalho
-                      └ Workflow ┐                                        | Diretório de projeto
-                                 ├ [Year] ┐                               | Diretório de controle
-                                 │        └ [Release] ┐                   | Diretório de controle
-                                 │                    ├ Repository        | Arquivos do repositório
-                                 │                    └ Software          | Arquivos de software
-                                 └ Management                             | Documentação técnica
-```
-
-### Software
-
-```
-[Usuário] ┐
-          └ .DC ┐                                                         | Diretório raiz
-                └ Workflow ┐                                              | Diretório de instalação
-                           ├ Software                                     | Arquivos de software
-                           ├ Extensions                                   | Arquivos de extensões
-                           ├ Events                                       | Arquivos de eventos
-                           └ Cache                                        | Arquivos temporários
-```
-
-### Backup
-
-```
-[Configurável] ┐                                                          | Diretório raiz
-               └ Workflow ┐                                               | Diretório de armazenamento
-                          └ [Dispositivo] ┐                               | Diretório de controle
-                                          └ [Usuário] ┐                   | Diretório de controle
-                                                      └ {+}               | Dados
-```
-
-</details>
-
-## Código-fonte
-
-Prepare-se para uma jornada emocionante pelo universo do software livre.
-
-<details>
-<summary>Fundamentos da licença GPL</summary>
-
-- **Liberdade 0:** Execute o software como quiser, para qualquer finalidade.
-- **Liberdade 1:** Explore e ajuste o software conforme suas necessidades.
-- **Liberdade 2:** Compartilhe o software para ajudar outras pessoas.
-- **Liberdade 3:** Melhore o software e compartilhe suas inovações com a comunidade.
-
-> Verifique [SPDX.org][SPDX.org] para mais informações.
-
-</details>
-
-<details>
-<summary>Acesso ao código-fonte</summary>
-
-- Baixe a versão mais recente de software do repositório.
-- Extraia o conteúdo do pacote com um software compatível.
-- Abra o arquivo de software `ps1` em um IDE.
-- Aproveite a experiência!
 
 </details>
 
@@ -642,7 +383,7 @@ Prepare-se para uma jornada emocionante pelo universo do software livre.
 ### Requisitos
 
 <details>
-<summary>PowerShell: Como instalar</summary>
+<summary>PowerShell: Como Instalar</summary>
 
 - Windows
     - Abra o terminal
@@ -666,7 +407,7 @@ Alguns recursos precisam de acesso a pastas de usuário ou aplicativos. Adicione
 ### Extensões
 
 <details>
-<summary>Como instalar</summary>
+<summary>Como Instalar</summary>
 
 Siga para `Configurações` `>` `Extensões`
 
@@ -677,7 +418,7 @@ Siga para `Configurações` `>` `Extensões`
 </details>
 
 <details>
-<summary>Como atualizar</summary>
+<summary>Como Atualizar</summary>
 
 Siga para `Configurações` `>` `Extensões`
 
@@ -686,7 +427,7 @@ Siga para `Configurações` `>` `Extensões`
 </details>
 
 <details>
-<summary>Como desinstalar</summary>
+<summary>Como Desinstalar</summary>
 
 Siga para `Configurações` `>` `Extensões`
 
@@ -697,7 +438,7 @@ Siga para `Configurações` `>` `Extensões`
 ### Fontes
 
 <details>
-<summary>Como instalar</summary>
+<summary>Como Instalar</summary>
 
 Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [JetBrains Mono][JetBrains Mono]. Adicionalmente você pode utilizar [Cascadia Mono][Cascadia Mono], [Ubuntu Mono][Ubuntu Mono] ou [Noto Sans Mono][Noto Sans Mono].
 
@@ -717,7 +458,32 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
 
 </details>
 
-[Evolução]: /Evolution.md
+## Código-fonte
+
+Prepare-se para uma jornada emocionante pelo universo do software livre.
+
+<details>
+<summary>Fundamentos da Licença GPL</summary>
+
+- **Liberdade 0:** Execute o software como quiser, para qualquer finalidade.
+- **Liberdade 1:** Explore e ajuste o software conforme suas necessidades.
+- **Liberdade 2:** Compartilhe o software para ajudar outras pessoas.
+- **Liberdade 3:** Melhore o software e compartilhe suas inovações com a comunidade.
+
+> Verifique [SPDX.org][SPDX.org] para mais informações.
+
+</details>
+
+<details>
+<summary>Acesso ao Código-fonte</summary>
+
+- Baixe a versão mais recente de software do repositório.
+- Extraia o conteúdo do pacote com um software compatível.
+- Abra o arquivo de software `ps1` em um IDE.
+- Aproveite a experiência!
+
+</details>
+
 [Política de Suporte]: /Policies.md
 [7zip]: https://www.7-zip.org/7z.html
 [WebP]: https://developers.google.com/speed/webp

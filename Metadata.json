@@ -1,7 +1,16 @@
 {
 	"DevelopmentStatus": "1",
-	"UpdateNumber": "25.11.0",
+	"UpdateNumber": "25.12.0",
 	"Releases": [
+		{
+			"ReleaseNumber": "25.12.0",
+			"SupportStatus": "1",
+			"PackageHashes": [
+				"AD3D23123398F967937BB922D9F93940970B1971DC21300CDE06E3025ABBBEDB",
+				"F0EAA642583FEEDBD14F3C7D98E2132B4B850A8FF7A678E72A21203287A698E5",
+				"12089076783EF5A3B27913096087B5F5B36F938D614E26DDFC27E2C8186DFF04"
+			]
+		},
 		{
 			"ReleaseNumber": "25.11.0",
 			"SupportStatus": "1",
@@ -22,7 +31,7 @@
 		},
 		{
 			"ReleaseNumber": "25.09.0",
-			"SupportStatus": "1",
+			"SupportStatus": "0",
 			"PackageHashes": [
 				"60FE67E6198AFF442F4672BB0D37742524E9813EF5E4AF73EE1F175A32DE4079",
 				"9FD524FBAA764A0CCBA7057C6D74059D1DDCB8E56EB15195D345678576B97FDE",
