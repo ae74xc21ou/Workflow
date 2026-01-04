@@ -18,15 +18,24 @@ Resumo cronológico das principais decisões e alterações do projeto.
 
 ## Linha do Tempo
 
+### 2026
+
+- `ADR` `A` `26.01.0` Ampliação de suporte a gerenciadores de pacotes
+- `ADR` `A` `26.01.0` Remoção dos requisitos de sistema operacional
+- `ADR` `A` `26.01.0` Remoção dos requisitos de arquitetura
+- `ADR` `A` `26.01.0` **Adição do idioma Inglês para a interface**
+
 ### 2025
 
+- `ADR` `A` `25.12.0` **Implementação da solicitação de autorização**
 - `ADR` `A` `25.10.0` **Implementação da verificação de sentinelas**
 - `ADR` `A` `25.09.0` **Implementação de fontes de software**
 - `ADR` `A` `25.08.0` Adição de suporte à extensão FLAC
 - `ADR` `A` `25.07.0` Transição da documentação dos pacotes de software para o formato MD
 - `GDR` `A` `25.07.0` Migração do repositório do projeto
-- `ADR` `A` `25.06.0` Remoção do suporte às arquiteturas X86 e ARM32
+- `ADR` `S` `25.06.0` Remoção do suporte às arquiteturas X86 e ARM32
 - `ADR` `A` `25.04.0` Adição de suporte à extensão FFmpeg
+- `ADR` `A` `25.04.0` Adição de Suporte a Gerenciadores de Pacotes
 - `GDR` `A` `25.04.0` Restrição da política de contribuição
 - `ADR` `A` `25.03.0` Adição de suporte à extensão WebP
 - `GDR` `A` `25.01.0` **Adoção da licença de documentação CC-BY-NC-SA-4.0**
@@ -53,7 +62,7 @@ Resumo cronológico das principais decisões e alterações do projeto.
 - `PDR` `S` `22.250.1` Transição para o modelo de nota de lançamento Flat
 - `ADR` `A` `22.100.1` **Implementação da verificação de integridade**
 - `ADR` `A` `22.070.1` **Implementação da atualização automática**
-- `GDR` `A` `22.070.1` Implementação da política de ciclo de Vida
+- `GDR` `A` `22.070.1` Implementação da política de ciclo de vida
 - `GDR` `A` `22.070.1` Implementação da política de atualização
 - `GDR` `A` `20.070.1` Implementação da política de suporte
 - `ADR` `A` `22.50.1` **Implementação do registro de eventos**
@@ -76,6 +85,7 @@ Resumo cronológico das principais decisões e alterações do projeto.
 - `ADR` `A` `15.9.0-001` Implementação da política de código aberto
 - `ADR` `A` `2.13.0-001` Adição de suporte à extensão 7-Zip
 - `ADR` `A` `2.13.0-001` Implementação da política de extensões
+- `ADR` `A` `0.9.0-001` Adoção do idioma Português para a interface
 - `PDR` `S` `0.9.0-001` Adoção do modelo de nota de lançamento SemVer‑tiered
 - `GDR` `S` `0.9.0-001` Adoção do sistema de versionamento SemVer
 - `GDR` `S` `0.9.0-001` Adoção da sequência de fim de linha CRLF
@@ -87,11 +97,11 @@ Resumo cronológico das principais decisões e alterações do projeto.
 
 ## Estatísticas
 
-- **Versões lançadas:** 88
-- **Linhas de código:** 6500+
-- **Extensões suportadas:** 4
-- **Plataformas suportadas:** 2
-- **Arquiteturas suportadas:** 2
+- **Idiomas Suportados:** 2
+- **Extensões Suportadas:** 4
+- **Plataformas Suportadas:** 2
+- **Linhas de Código:** 8500+
+- **Versões Lançadas:** 85+
 
 ## Informações
 
