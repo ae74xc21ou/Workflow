@@ -22,6 +22,7 @@
         <a href="/Progress.md">Progresso</a> ∙
         <a href="/Policies.md">Políticas</a> ∙
         <a href="/License.md">Licenças</a> ∙
-        A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2025 David Camargo. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito e contribuições externas não são aceitas.
+        <a href="/Help.md">Código-fonte</a> ∙
+        A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2026 David Camargo. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito e contribuições externas não são aceitas.
     </sub>
 </div>

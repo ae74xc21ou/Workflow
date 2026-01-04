@@ -97,7 +97,7 @@ Após a instalação, você pode usar o atalho criado no diretório do usuário 
 <details>
 <summary>Como Desinstalar</summary>
 
-Siga para `Configurações` `>` `Desinstalar`.
+Siga para `Configurações` `>` `Manutenção` `>` `Desinstalar`.
 
 </details>
 
@@ -140,7 +140,7 @@ Prossiga conforme a fonte configurada:
 <details>
 <summary>O Software não Recebe Atualizações Automaticamente</summary>
 
-A fonte de software está configurada incorretamente ou não provisionada; a atualização automática está desabilitada; o software não é executado há muito tempo. Neste cenário a versão instalada pode ter perdido suporte e está impossibilitada de receber atualizações. Prossiga com a desinstalação manual e a instalação da versão de software mais recente. Verifique [Evolução][Evolução] e [Política de Suporte][Política de Suporte] para mais informações.
+A fonte de software está configurada incorretamente ou não provisionada; a atualização automática está desabilitada; o software não é executado há muito tempo. Neste cenário a versão instalada pode ter perdido suporte e está impossibilitada de receber atualizações. Prossiga com a desinstalação manual e a instalação da versão de software mais recente. Verifique [Política de Suporte][Política de Suporte] para mais informações.
 
 </details>
 
@@ -207,36 +207,36 @@ Esse recurso reduz riscos de perda de dados ao manter uma cópia adicional em um
 <details>
 <summary>Pacotes</summary>
 
-- **Formatos de Entrada:** `.tar.gz`, `.tar.bz2`, `.tar.xz`, `.tar.zst`, `.tar`, `.zip`, `.rar`
+- **Formatos Suportados:** `.tar.gz`, `.tar.bz2`, `.tar.xz`, `.tar.zst`, `.tar`, `.zip`, `.rar`
 
-- **Formato de Saída:** `7z` é um formato moderno e eficiente que utiliza algoritmos avançados, como LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida, que agrupam arquivos semelhantes para uma compactação mais otimizada, além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume. Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
+- **Formato de Conversão:** `7z` é um formato moderno e eficiente que utiliza algoritmos avançados, como LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida, que agrupam arquivos semelhantes para uma compactação mais otimizada, além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume. Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
 
 </details>
 
 <details>
 <summary>Imagens</summary>
 
-- **Formatos de Entrada:** `.jpg`, `.jpeg`, `.tif`, `.tiff`, `.png`, `.bmp`
+- **Formatos Suportados:** `.jpg`, `.jpeg`, `.tif`, `.tiff`, `.png`, `.bmp`
 
-- **Formato de Saída:** `WebP` é um formato moderno e versátil que oferece compressão lossless, resultando em arquivos menores sem perda de qualidade. Suporta transparência e animações, substituindo de forma eficiente formatos tradicionais como BMP, TIFF, PNG e JPEG. Por ser um formato aberto e gratuito, não há custos com licenciamento ou royalties. Além disso, seu amplo suporte em sistemas operacionais, navegadores e ferramentas de edição o torna uma escolha inteligente em comparação com formatos mais recentes. [Saiba mais][WebP].
+- **Formato de Conversão:** `WebP` é um formato moderno e versátil que oferece compressão lossless, resultando em arquivos menores sem perda de qualidade. Suporta transparência e animações, substituindo de forma eficiente formatos tradicionais como BMP, TIFF, PNG e JPEG. Por ser um formato aberto e gratuito, não há custos com licenciamento ou royalties. Além disso, seu amplo suporte em sistemas operacionais, navegadores e ferramentas de edição o torna uma escolha inteligente em comparação com formatos mais recentes. [Saiba mais][WebP].
 
 </details>
 
 <details>
 <summary>Áudios</summary>
 
-- **Formatos de Entrada:** `.raw`, `.wav`, `.aif`, `.aiff`, `.mp3`, `.aac`, `.wma`, `.m4a`
+- **Formatos Suportados:** `.raw`, `.wav`, `.aif`, `.aiff`, `.mp3`, `.aac`, `.wma`, `.m4a`
 
-- **Formato de Saída:** `FLAC` (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
+- **Formato de Conversão:** `FLAC` (Free Lossless Audio Codec) é um formato de compressão de áudio sem perda de qualidade, ideal para arquivamento e backups de arquivos de áudio. Ao contrário de formatos com perdas como MP3 ou AAC, o FLAC preserva todos os dados originais, garantindo fidelidade absoluta na reprodução. Sua compactação reduz significativamente o tamanho dos arquivos, sem comprometer a integridade do conteúdo. Por ser um formato aberto, gratuito e amplamente compatível com aplicativos e sistemas operacionais, o FLAC é a escolha perfeita para quem busca qualidade e eficiência no armazenamento de áudio. [Saiba mais][FLAC].
 
 </details>
 
 <details>
 <summary>Vídeos</summary>
 
-- **Formatos de Entrada:** `.mov`, `.avi`, `.mpg`, `.wmv`, `.mp4`
+- **Formatos Suportados:** `.mov`, `.avi`, `.mpg`, `.wmv`, `.mp4`
 
-- **Formato de Saída:** `MKV` (Matroska Video) é um formato multimídia aberto e flexível que suporta múltiplas faixas de vídeo, áudio, legendas e metadados em um único arquivo. Essa versatilidade o torna ideal para arquivamento e distribuição de mídia em alta qualidade, mantendo compatibilidade com uma ampla gama de players e ferramentas de edição. Utilizado em conjunto com os codecs **VP9** (vídeo) e **FLAC** (áudio), garante alta eficiência de compressão sem perdas visuais e sonoras. O VP9 proporciona excelente relação entre qualidade e tamanho de arquivo em vídeos de alta definição, enquanto o FLAC assegura fidelidade absoluta na reprodução do áudio. Essa combinação oferece uma solução moderna, gratuita e livre de royalties, equilibrando desempenho, qualidade e acessibilidade. [Saiba mais][MKV].
+- **Formato de Conversão:** `MKV` (Matroska Video) é um formato multimídia aberto e flexível que suporta múltiplas faixas de vídeo, áudio, legendas e metadados em um único arquivo. Essa versatilidade o torna ideal para arquivamento e distribuição de mídia em alta qualidade, mantendo compatibilidade com uma ampla gama de players e ferramentas de edição. Utilizado em conjunto com os codecs **VP9** (vídeo) e **FLAC** (áudio), garante alta eficiência de compressão sem perdas visuais e sonoras. O VP9 proporciona excelente relação entre qualidade e tamanho de arquivo em vídeos de alta definição, enquanto o FLAC assegura fidelidade absoluta na reprodução do áudio. Essa combinação oferece uma solução moderna, gratuita e livre de royalties, equilibrando desempenho, qualidade e acessibilidade. [Saiba mais][MKV].
 
 </details>
 
@@ -279,6 +279,32 @@ Essa opção é útil se você prefere revisar o resultado da conversão antes d
 - Consolidar: Aciona o DISM para limpar e otimizar a imagem do sistema, removendo componentes obsoletos e versões antigas, liberando espaço de armazenamento e melhorando a eficiência geral do sistema.
 
 > A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma.
+
+</details>
+
+## Desenvolvimento
+
+<details>
+<summary>Estrutura do Diretório de Projeto</summary>
+
+```
+Workflow ┐                                                   | Diretório de Projeto
+         ├ Releases ┐                                        | Diretório de Releases
+         │          └ [Year] ┐                               | Diretório de Controle
+         │                   └ [Release] ┐                   | Diretório de Controle
+         │                               ├ Repository        | Diretório de Arquivos do Repositório
+         │                               └ Software          | Diretório de Arquivos de Software
+         └ Management                                        | Diretório de Documentação Técnica
+```
+
+</details>
+
+<details>
+<summary>Como Empacotar um Release</summary>
+
+- Configure o apontamento para o diretório de projeto em `Configurações` `>` `Desenvolvimento` `>` `Diretório de Projeto`
+- Siga para `Desenvolvimento` `>` `Empacotar`
+- Especifique o número de release desejado
 
 </details>
 
