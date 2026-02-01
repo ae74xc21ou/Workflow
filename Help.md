@@ -282,32 +282,6 @@ Essa opção é útil se você prefere revisar o resultado da conversão antes d
 
 </details>
 
-## Desenvolvimento
-
-<details>
-<summary>Estrutura do Diretório de Projeto</summary>
-
-```
-Workflow ┐                                                   | Diretório de Projeto
-         ├ Releases ┐                                        | Diretório de Releases
-         │          └ [Year] ┐                               | Diretório de Controle
-         │                   └ [Release] ┐                   | Diretório de Controle
-         │                               ├ Repository        | Diretório de Arquivos do Repositório
-         │                               └ Software          | Diretório de Arquivos de Software
-         └ Management                                        | Diretório de Documentação Técnica
-```
-
-</details>
-
-<details>
-<summary>Como Empacotar um Release</summary>
-
-- Configure o apontamento para o diretório de projeto em `Configurações` `>` `Desenvolvimento` `>` `Diretório de Projeto`
-- Siga para `Desenvolvimento` `>` `Empacotar`
-- Especifique o número de release desejado
-
-</details>
-
 ## Configurações
 
 ### Monitoramento
@@ -395,12 +369,79 @@ A Solicitação de Autorização exige confirmação explícita do usuário ao e
 
 </details>
 
+### Desenvolvimento
+
+<details>
+<summary>Estrutura do Diretório de Projeto</summary>
+
+```
+Workflow ┐                                                   | Diretório de Projeto
+         ├ Releases ┐                                        | Diretório de Releases
+         │          └ [Year] ┐                               | Diretório de Controle
+         │                   └ [Release] ┐                   | Diretório de Controle
+         │                               ├ Repository        | Diretório de Arquivos do Repositório
+         │                               └ Software          | Diretório de Arquivos de Software
+         └ Management                                        | Diretório de Documentação Técnica
+```
+
+</details>
+
+<details>
+<summary>Como Empacotar um Release</summary>
+
+- Configure o apontamento para o diretório de projeto em `Configurações` `>` `Desenvolvimento` `>` `Diretório de Projeto`
+- Siga para `Configurações` `>` `Desenvolvimento` `>` `Empacotar`
+- Especifique o número de release desejado
+
+</details>
+
 ## Modos
 
 <details>
-<summary>Reversão</summary>
+<summary>Modo de Preservação</summary>
 
-O Modo de Reversão protege suas configurações ao executar versões anteriores de software. Todas as alterações são descartadas ao encerrar. O Modo de Reversão é ativado automaticamente e não é possível desativá-lo manualmente.
+O Modo de Preservação atua como um recurso automático de proteção das configurações. Esse modo é ativado quando o software detecta que a versão em execução é inferior à versão registrada nas configurações, prevenindo que uma versão antiga sobrescreva dados mais recentes com estrutura incompatível.
+
+Quando ativo, o software opera normalmente, porém nenhuma alteração nas configurações é persistida. Todas as modificações são descartadas ao encerrar a execução.
+
+O Modo de Preservação não pode ser habilitado ou desabilitado manualmente.
+
+</details>
+
+<details>
+<summary>Modo de Recuperação</summary>
+
+O Modo de Recuperação atua como uma camada automática de proteção contra comprometimento do código. Esse modo é ativado quando a Verificação de Integridade detecta corrupção ou modificação não autorizada no arquivo de software.
+
+Quando ativo, a execução de software é bloqueada para evitar comportamento imprevisível ou risco ao ambiente. Em seguida, o software é reinstalado automaticamente.
+
+O Modo de Recuperação não pode ser habilitado ou desabilitado manualmente.
+
+</details>
+
+## Código-fonte
+
+Prepare-se para uma jornada emocionante pelo universo do software livre.
+
+<details>
+<summary>Fundamentos da Licença GPL</summary>
+
+- **Liberdade 0:** Execute o software como quiser, para qualquer finalidade.
+- **Liberdade 1:** Explore e ajuste o software conforme suas necessidades.
+- **Liberdade 2:** Compartilhe o software para ajudar outras pessoas.
+- **Liberdade 3:** Melhore o software e compartilhe suas inovações com a comunidade.
+
+> Verifique [SPDX.org][SPDX.org] para mais informações.
+
+</details>
+
+<details>
+<summary>Acesso ao Código-fonte</summary>
+
+- Baixe a versão mais recente de software do repositório.
+- Extraia o conteúdo do pacote com um software compatível.
+- Abra o arquivo de software `ps1` em um IDE.
+- Aproveite a experiência!
 
 </details>
 
@@ -481,32 +522,6 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
     - Método 2
         - Copie a fonte para o diretório do sistema `sudo cp -r * /usr/local/share/fonts`
         - Atualize o cache de fontes do sistema `sudo fc-cache --force --verbose`
-
-</details>
-
-## Código-fonte
-
-Prepare-se para uma jornada emocionante pelo universo do software livre.
-
-<details>
-<summary>Fundamentos da Licença GPL</summary>
-
-- **Liberdade 0:** Execute o software como quiser, para qualquer finalidade.
-- **Liberdade 1:** Explore e ajuste o software conforme suas necessidades.
-- **Liberdade 2:** Compartilhe o software para ajudar outras pessoas.
-- **Liberdade 3:** Melhore o software e compartilhe suas inovações com a comunidade.
-
-> Verifique [SPDX.org][SPDX.org] para mais informações.
-
-</details>
-
-<details>
-<summary>Acesso ao Código-fonte</summary>
-
-- Baixe a versão mais recente de software do repositório.
-- Extraia o conteúdo do pacote com um software compatível.
-- Abra o arquivo de software `ps1` em um IDE.
-- Aproveite a experiência!
 
 </details>
 

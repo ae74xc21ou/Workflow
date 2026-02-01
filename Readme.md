@@ -1,20 +1,48 @@
-![](/Images/Introduction.png)
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/IntroductionLight.png"/>
+        <img src="/Images/IntroductionDark.png"/>
+    </picture>
+</p>
 
-![](/Images/Description.png)
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/BackupLight.png"/>
+        <img src="/Images/BackupDark.png"/>
+    </picture>
+</p>
 
-![](/Images/Backup.png)
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/ConversionLight.png"/>
+        <img src="/Images/ConversionDark.png"/>
+    </picture>
+</p>
 
-![](/Images/Conversion.png)
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/MaintenanceLight.png"/>
+        <img src="/Images/MaintenanceDark.png"/>
+    </picture>
+</p>
 
-![](/Images/Diagnostics.png)
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/ResourcesLight.png"/>
+        <img src="/Images/ResourcesDark.png"/>
+    </picture>
+</p>
 
-![](/Images/Maintenance.png)
+<p align="center">
+    <a href="https://github.com/ae74xc21ou/workflow/releases">
+        <picture>
+            <source media="(prefers-color-scheme: light)" srcset="/Images/DownloadLight.png"/>
+            <img src="/Images/DownloadDark.png"/>
+        </picture>
+    </a>
+</p>
 
-![](/Images/Resources.png)
-
-[![](/Images/Download.png)](https://github.com/ae74xc21ou/workflow/releases)
-
-#
+<h1></h1>
 
 <div align="center">
     <sub>
