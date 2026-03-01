@@ -20,6 +20,7 @@ Resumo cronológico das principais decisões e alterações do projeto.
 
 ### 2026
 
+- `ADR` `A` `26.03.0` **Implementação do controle de execução**
 - `ADR` `A` `26.01.0` Ampliação de suporte a gerenciadores de pacotes
 - `ADR` `A` `26.01.0` Remoção dos requisitos de sistema operacional
 - `ADR` `A` `26.01.0` Remoção dos requisitos de arquitetura

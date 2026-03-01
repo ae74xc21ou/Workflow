@@ -11,7 +11,7 @@ Um guia para instalação e execução de software. Encontre soluções para pro
 
 Fontes são canais de distribuição de software que podem ser remotas, locais ou personalizadas, usadas para instalação e atualização.
 
-Permitir a seleção entre fontes é uma estratégia flexível que aumenta a disponibilidade do software, dando aos usuários a opção entre atualização automática e controle local. O recurso atende a cenários de desenvolvimento, produção e emergência e possibilita estratégias híbridas, combinando automação com segurança e redundância para rollback.
+Permitir a seleção entre fontes é uma estratégia flexível que aumenta a disponibilidade do software, dando a você a opção entre atualização automática e controle local. O recurso atende a cenários de desenvolvimento, produção e emergência e possibilita estratégias híbridas, combinando automação com segurança e redundância para rollback.
 
 </details>
 
@@ -111,7 +111,10 @@ Você está executando uma versão de software sem suporte ou selecionou uma fon
 <details>
 <summary>Atalho Ausente no Diretório do Usuário</summary>
 
-Caso o atalho `Workflow.ps1` esteja ausente no diretório `$Home`, verifique o tópico **Acesso a Pastas Controladas** na seção **Software de Terceiros**. Em seguida execute Workflow manualmente a partir do diretório de instalação de software `%UserProfile%\AppData\Local\DC\Workflow\Software` para que o atalho seja recriado automaticamente.
+Caso o atalho `Workflow.ps1` esteja ausente no diretório `$Home`, verifique o tópico **Acesso a Pastas Controladas** na seção **Software de Terceiros**. Em seguida execute Workflow manualmente a partir do diretório de instalação de software para que o atalho seja recriado automaticamente.
+
+- Windows: `$Home\AppData\Local\DC\Workflow\Software\Workflow.ps1`
+- Linux: `$Home/.DC/Workflow/Software/Workflow.ps1`
 
 </details>
 
@@ -146,72 +149,18 @@ A fonte de software está configurada incorretamente ou não provisionada; a atu
 
 ## Fluxos
 
-### Backup
-
-<details>
-<summary>Multidispositivos e Multiusuários</summary>
-
-O suporte a multidispositivos e multiusuários de Workflow permite armazenar backups de vários dispositivos e usuários na mesma estrutura de backup.
-
-Workflow opera em nível de usuário, impedindo que outros acessem seus dados locais. No entanto, o backup de dados não é criptografado. É importante garantir que os diretórios de backup e réplica sejam armazenados de forma segura para proteger seus dados contra acesso não autorizado.
-
-```
-[Configurável] ┐                                                           | Diretório de backup/replica
-               └ Workflow ┐                                                | Diretório de armazenamento
-                          └ [Dispositivo] ┐                                | Diretório de controle
-                                          └ [Usuário] ┐                    | Diretório de controle
-                                                      └ {+}                | Dados
-```
-
-</details>
+### Inventário
 
 <details>
 <summary>Período de Retenção</summary>
 
-O Período de Retenção define por quanto tempo os arquivos de backup e réplica serão mantidos. Após esse período, Workflow remove automaticamente os itens mais antigos, preservando apenas os arquivos dentro da janela configurada.
+O Período de Retenção define por quanto tempo os dados coletados permanecem válidos. Após esse período, você será notificado para atualizar o inventário.
 
-Esse recurso mantém o diretório de armazenamento organizado, evita acúmulo desnecessário de dados e ajuda a controlar o uso de espaço em disco. O usuário pode ajustar o período conforme sua estratégia de backup, capacidade de armazenamento e necessidade de histórico.
-
-</details>
-
-<details>
-<summary>Níveis de Compressão</summary>
-
-Os níveis de compressão definem o equilíbrio entre desempenho e eficiência no tamanho do arquivo final. Workflow utiliza o algoritmo **LZMA2** e ajusta automaticamente o uso de memória e o nível de análise conforme a configuração selecionada.
-
-- **Nível Mínimo:** Prioriza velocidade e baixo consumo de memória. O processamento é rápido e o impacto no sistema é mínimo, mas o tamanho final do backup é maior.
-- **Níveis Baixo e Médio:** Oferecem um equilíbrio adequado entre tempo de processamento, uso de recursos e redução do tamanho do arquivo. Recomendados para a maioria dos cenários.
-- **Níveis Alto e Máximo:** Utilizam mais memória e exigem maior tempo de processamento para obter a melhor taxa de compactação possível. Adequados para dispositivos com maior capacidade ou backups de grande volume.
-
-Durante a compressão, Workflow ajusta automaticamente:
-
-- Intensidade da compressão.
-- Consumo de memória proporcional ao nível selecionado.
-- Pofundidade da análise de dados.
-
-Essa combinação garante resultados consistentes, permitindo ao usuário escolher entre velocidade, economia de recursos ou máxima compactação conforme a necessidade.
-
-</details>
-
-<details>
-<summary>Replicação Automática</summary>
-
-A Replicação Automática copia os arquivos de backups para o diretório de réplica configurado, garantindo uma segunda cópia dos dados sem intervenção do usuário. Quando habilitada, a replicação ocorre imediatamente após o término do processo de backup.
-
-Esse recurso reduz riscos de perda de dados ao manter uma cópia adicional em um local independente do diretório de backup. A execução é totalmente automatizada e não exige agendamento, tornando a proteção dos dados contínua e previsível.
+Esse recurso ajuda a manter os dados atualizados e proporciona controle preciso sobre alterações. Você pode ajustar o período conforme sua estratégia de inventário.
 
 </details>
 
 ### Conversão
-
-<details>
-<summary>Pacotes</summary>
-
-- **Formatos Suportados:** `.tar.gz`, `.tar.bz2`, `.tar.xz`, `.tar.zst`, `.tar`, `.zip`, `.rar`
-
-- **Formato de Conversão:** `7z` é um formato moderno e eficiente que utiliza algoritmos avançados, como LZMA2, para oferecer uma compressão de alta performance e reduzir significativamente o tamanho dos arquivos. Com filtros avançados e compressão sólida, que agrupam arquivos semelhantes para uma compactação mais otimizada, além do suporte à tecnologia multi-threading, o 7z acelera todo o processo, mesmo com arquivos de grande volume. Por ser um formato aberto e gratuito, ele reúne performance e flexibilidade em uma única solução. [Saiba mais][7Zip].
-
-</details>
 
 <details>
 <summary>Imagens</summary>
@@ -243,42 +192,74 @@ Esse recurso reduz riscos de perda de dados ao manter uma cópia adicional em um
 <details>
 <summary>Limite de Processamento</summary>
 
-O Limite de Processamento define quantos arquivos serão convertidos em uma única execução. Quando o número de itens disponíveis excede o limite configurado, apenas os primeiros arquivos são processados e a conversão é encerrada ao atingir o limite. Os demais itens permanecem disponíveis para conversão, permitindo que o usuário inicie uma nova execução posteriormente.
+O Limite de Processamento define quantos arquivos serão convertidos em uma única execução. Quando o número de itens disponíveis excede o limite configurado, apenas os primeiros arquivos são processados e a conversão é encerrada. Os demais itens permanecem disponíveis para conversão, permitindo que você inicie uma nova execução posteriormente.
 
-Esse recurso evita operações excessivamente longas em cenários com grande volume de arquivos e oferece maior previsibilidade no tempo de execução, permitindo ao usuário ajustar o limite conforme sua rotina e capacidade do dispositivo.
+Esse recurso evita operações excessivamente longas em cenários com grande volume de arquivos e oferece maior previsibilidade no tempo de execução.
 
 </details>
 
 <details>
 <summary>Preservar Originais</summary>
 
-Quando habilitada, a opção Preservar Originais mantém os arquivos de entrada no diretório de conversão após a conclusão do processo. Workflow não remove o conteúdo original automaticamente, permitindo que o usuário decida quando e como descartá-lo.
+Quando habilitada, a opção Preservar Originais mantém os arquivos de entrada no diretório de conversão após a conclusão do processo. Workflow não remove o conteúdo original automaticamente, permitindo que você decida quando e como descartá-lo.
 
 Essa opção é útil se você prefere revisar o resultado da conversão antes de excluir os arquivos originais ou para cenários em que é necessário manter uma cópia intacta dos dados de entrada.
 
 </details>
 
-### Manutenção
+### Backup
 
 <details>
-<summary>Verificar Imagem do Sistema</summary>
+<summary>Multidispositivos e Multiusuários</summary>
 
-- Verificar: Aciona o DISM (Deployment Imaging Service and Management Tool) para analisar a integridade da imagem do sistema, buscando possíveis corrupções.
+O suporte a multidispositivos e multiusuários de Workflow permite armazenar backups de vários dispositivos e usuários na mesma estrutura de backup.
 
-- Reparar: Aciona o DISM para reparar automaticamente a integridade da imagem do sistema utilizando arquivos de reparo disponíveis localmente ou baixando-os dos servidores da Microsoft.
+Workflow opera em nível de usuário, impedindo que outros acessem seus dados locais. No entanto, o backup de dados não é criptografado. É importante garantir que os diretórios de backup e réplica sejam armazenados de forma segura para proteger seus dados contra acesso não autorizado.
 
-> A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma.
+```
+[Configurável] ┐                                                           | Diretório de backup/replica
+               └ Workflow ┐                                                | Diretório de armazenamento
+                          └ [Dispositivo] ┐                                | Diretório de controle
+                                          └ [Usuário] ┐                    | Diretório de controle
+                                                      └ {+}                | Dados
+```
 
 </details>
 
 <details>
-<summary>Verificar Instalação do Sistema</summary>
+<summary>Período de Retenção</summary>
 
-- Verificar: Aciona o SFC (System File Checker) para analisar e reparar arquivos de sistema corrompidos ou ausentes a partir de uma cópia em cache disponível em uma área protegida do sistema.
+O Período de Retenção define por quanto tempo os arquivos de backup e réplica são mantidos. Após esse período, arquivos antigos serão removidos automaticamente.
 
-- Consolidar: Aciona o DISM para limpar e otimizar a imagem do sistema, removendo componentes obsoletos e versões antigas, liberando espaço de armazenamento e melhorando a eficiência geral do sistema.
+Esse recurso mantém os diretórios de armazenamento organizados e ajuda a controlar o uso de espaço de armazenamento. Você pode ajustar o período conforme sua estratégia de backup, capacidade de armazenamento e necessidade de versionamento.
 
-> A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma.
+</details>
+
+<details>
+<summary>Níveis de Compressão</summary>
+
+Os níveis de compressão definem o equilíbrio entre desempenho e eficiência no tamanho do arquivo final. Workflow utiliza o algoritmo **LZMA2** e ajusta automaticamente o uso de memória e o nível de análise conforme a configuração selecionada.
+
+- **Nível Mínimo:** Prioriza velocidade e baixo consumo de memória. O processamento é rápido e o impacto no sistema é mínimo, mas o tamanho final do backup é maior.
+- **Níveis Baixo e Médio:** Oferecem um equilíbrio adequado entre tempo de processamento, uso de recursos e redução do tamanho do arquivo. Recomendados para a maioria dos cenários.
+- **Níveis Alto e Máximo:** Utilizam mais memória e exigem maior tempo de processamento para obter a melhor taxa de compactação possível. Adequados para dispositivos com maior capacidade ou backups de grande volume.
+
+Durante a compressão, Workflow ajusta automaticamente:
+
+- Intensidade da compressão.
+- Consumo de memória proporcional ao nível selecionado.
+- Pofundidade da análise de dados.
+
+Essa combinação garante resultados consistentes, permitindo a você escolher entre velocidade, economia de recursos ou máxima compactação conforme a necessidade.
+
+</details>
+
+<details>
+<summary>Replicação Automática</summary>
+
+A Replicação Automática copia os arquivos de backups para o diretório de réplica configurado, garantindo uma segunda cópia dos dados sem intervenção do usuário. Quando habilitada, a replicação ocorre imediatamente após o término do processo de backup.
+
+Esse recurso reduz riscos de perda de dados ao manter uma cópia adicional em um local independente do diretório de backup. A execução é totalmente automatizada e não exige agendamento, tornando a proteção dos dados contínua e previsível.
 
 </details>
 
@@ -289,7 +270,7 @@ Essa opção é útil se você prefere revisar o resultado da conversão antes d
 <details>
 <summary>Eventos</summary>
 
-O Registro de Eventos coleta e armazena localmente informações sobre o ambiente, usuário e a execução do software. Esses dados são automaticamente excluídos conforme a Política de Retenção. O usuário pode desativar o Registro de Eventos ou ajustar o período de retenção nas configurações.
+O Registro de Eventos coleta e armazena localmente informações sobre o ambiente, usuário e a execução do software. Esses dados são automaticamente excluídos conforme a Política de Retenção. Você pode desativar o Registro de Eventos ou ajustar o período de retenção nas configurações.
 
 Os dados do Registro de Eventos permitem identificar padrões de uso, ajudam a monitorar o desempenho, diagnosticar problemas e manter a cronologia das atividades de software, facilitando a análise retroativa e a recuperação de informações.
 
@@ -300,9 +281,9 @@ Nenhum dado é enviado para a internet.
 <details>
 <summary>Bateria</summary>
 
-A Verificação de Bateria impede a execução de funcionalidades que demandam maior poder de processamento quando o nível atual estiver abaixo do valor configurado. Quando essa condição é identificada, a execução é interrompida e o usuário pode autorizar manualmente a continuidade, garantindo maior segurança em dispositivos móveis ou com baixo nível de bateria.
+A Verificação de Bateria impede a execução de funcionalidades que demandam maior poder de processamento quando o nível atual estiver abaixo do valor configurado. Quando essa condição é identificada, a execução é interrompida e você pode autorizar manualmente a continuidade, garantindo maior segurança em dispositivos móveis ou com baixo nível de bateria.
 
-Esse controle evita interrupções inesperadas e protege a integridade das operações, especialmente em fluxos que exigem tempo prolongado de execução ou uso intensivo de recursos. O nível pode ser configurado conforme a necessidade do usuário e o perfil de uso do dispositivo.
+Esse controle evita interrupções inesperadas e protege a integridade das operações, especialmente em fluxos que exigem tempo prolongado de execução ou uso intensivo de recursos. O nível pode ser configurado conforme a sua necessidade e o perfil de uso do dispositivo.
 
 </details>
 
@@ -445,7 +426,7 @@ Prepare-se para uma jornada emocionante pelo universo do software livre.
 
 </details>
 
-## Softwares de Terceiros
+## Software de Terceiros
 
 ### Requisitos
 
@@ -467,7 +448,7 @@ Prepare-se para uma jornada emocionante pelo universo do software livre.
 <details>
 <summary>Windows: Acesso a Pastas Controladas</summary>
 
-Alguns recursos precisam de acesso a pastas de usuário ou aplicativos. Adicione o PowerShell e o 7-Zip ao Acesso a Pastas Controladas nas configurações de segurança do Windows.
+Algumas funcionalidades de Workflow podem requerer acesso a pastas de usuário protegidas pelo recurso **Acesso a Pastas Controladas** do Windows, quando habilitado. Adicione o PowerShell `pwsh.exe`, o 7-Zip `7z.exe`, o WebP `cwebp.exe`, o FFmpeg `ffmpeg.exe` e o FLAC `flac.exe` à lista de aplicativos permitidos para que funcionem adequadamente.
 
 </details>
 
@@ -480,7 +461,7 @@ Siga para `Configurações` `>` `Extensões`
 
 > Pode requerer elevação de privilégios
 
-> As extensões foram movidas para a estrutura de diretórios de software em ambiente **Linux** na versão **25.05.0**. Workflow não utilizará os binários das extensões disponíveis no `$PATH` do sistema, com exceção das extensões FFmpeg e FLAC. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem interferir nos binários instalados via APT e reduzindo a necessidade de elevação de privilégios para a instalação de softwares adicionais.
+> As extensões foram movidas para a estrutura de diretórios de software a partir da versão **25.05.0**. Workflow não utiliza executáveis ou binários disponíveis no `$PATH` das plataformas, com exceção do 7-Zip no Windows, e FFmpeg e FLAC no Linux. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem a necessidade de elevação de privilégios para a instalação de softwares adicionais.
 
 </details>
 

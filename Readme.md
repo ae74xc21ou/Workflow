@@ -7,8 +7,8 @@
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/BackupLight.png"/>
-        <img src="/Images/BackupDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/InventoryLight.png"/>
+        <img src="/Images/InventoryDark.png"/>
     </picture>
 </p>
 
@@ -21,8 +21,8 @@
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/MaintenanceLight.png"/>
-        <img src="/Images/MaintenanceDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/BackupLight.png"/>
+        <img src="/Images/BackupDark.png"/>
     </picture>
 </p>
 
@@ -46,11 +46,16 @@
 
 <div align="center">
     <sub>
-        <a href="/Help.md">Ajuda</a> ∙
-        <a href="/Progress.md">Progresso</a> ∙
-        <a href="/Policies.md">Políticas</a> ∙
-        <a href="/License.md">Licenças</a> ∙
-        <a href="/Help.md">Código-fonte</a> ∙
+        <a href="/Help.md">Ajuda</a>
+        <span> ∙ </span>
+        <a href="/Progress.md">Progresso</a>
+        <span> ∙ </span>
+        <a href="/Policies.md">Políticas</a>
+        <span> ∙ </span>
+        <a href="/License.md">Licenças</a>
+        <span> ∙ </span>
+        <a href="/Help.md">Código-fonte</a>
+        <span> ∙ </span>
         A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2026 David Camargo. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito e contribuições externas não são aceitas.
     </sub>
 </div>
