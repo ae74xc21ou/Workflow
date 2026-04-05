@@ -1,43 +1,43 @@
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/IntroductionLight.png"/>
-        <img src="/Images/IntroductionDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/IntroductionLight.webp"/>
+        <img src="/Images/IntroductionDark.webp"/>
     </picture>
 </p>
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/InventoryLight.png"/>
-        <img src="/Images/InventoryDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/InventoryLight.webp"/>
+        <img src="/Images/InventoryDark.webp"/>
     </picture>
 </p>
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/ConversionLight.png"/>
-        <img src="/Images/ConversionDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/ConversionLight.webp"/>
+        <img src="/Images/ConversionDark.webp"/>
     </picture>
 </p>
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/BackupLight.png"/>
-        <img src="/Images/BackupDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/BackupLight.webp"/>
+        <img src="/Images/BackupDark.webp"/>
     </picture>
 </p>
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/ResourcesLight.png"/>
-        <img src="/Images/ResourcesDark.png"/>
+        <source media="(prefers-color-scheme: light)" srcset="/Images/ResourcesLight.webp"/>
+        <img src="/Images/ResourcesDark.webp"/>
     </picture>
 </p>
 
 <p align="center">
     <a href="https://github.com/ae74xc21ou/workflow/releases">
         <picture>
-            <source media="(prefers-color-scheme: light)" srcset="/Images/DownloadLight.png"/>
-            <img src="/Images/DownloadDark.png"/>
+            <source media="(prefers-color-scheme: light)" srcset="/Images/DownloadLight.webp"/>
+            <img src="/Images/DownloadDark.webp"/>
         </picture>
     </a>
 </p>
@@ -48,13 +48,9 @@
     <sub>
         <a href="/Help.md">Ajuda</a>
         <span> ∙ </span>
-        <a href="/Progress.md">Progresso</a>
-        <span> ∙ </span>
         <a href="/Policies.md">Políticas</a>
         <span> ∙ </span>
         <a href="/License.md">Licenças</a>
-        <span> ∙ </span>
-        <a href="/Help.md">Código-fonte</a>
         <span> ∙ </span>
         A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2026 David Camargo. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito e contribuições externas não são aceitas.
     </sub>

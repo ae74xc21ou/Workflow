@@ -356,13 +356,15 @@ A Solicitação de Autorização exige confirmação explícita do usuário ao e
 <summary>Estrutura do Diretório de Projeto</summary>
 
 ```
-Workflow ┐                                                   | Diretório de Projeto
-         ├ Releases ┐                                        | Diretório de Releases
-         │          └ [Year] ┐                               | Diretório de Controle
-         │                   └ [Release] ┐                   | Diretório de Controle
-         │                               ├ Repository        | Diretório de Arquivos do Repositório
-         │                               └ Software          | Diretório de Arquivos de Software
-         └ Management                                        | Diretório de Documentação Técnica
+[Usuário] ┐
+          └ Workspace ┐                                                              | Diretório de trabalho
+                      └ Workflow ┐                                                   | Diretório de projeto
+                                 └ Releases ┐                                        | Diretório de releases
+                                            └ [Year] ┐                               | Diretório de controle
+                                                     └ [Release] ┐                   | Diretório de controle
+                                                                 ├ Management        | Arquivos de gerenciamento
+                                                                 ├ Repository        | Arquivos do repositório
+                                                                 └ Software          | Arquivos de software
 ```
 
 </details>
@@ -436,12 +438,11 @@ Prepare-se para uma jornada emocionante pelo universo do software livre.
 - Windows
     - Abra o terminal
     - Instale o pacote `winget install --id Microsoft.PowerShell --source winget`
-
 - Linux
     - Abra o terminal
     - Instale o pacote `snap install powershell`
 
-> Pode requerer elevação de privilégios
+> Para mais detalhes, verifique a [documentação] oficial.
 
 </details>
 
@@ -512,6 +513,7 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
 [FLAC]: https://xiph.org/flac/documentation.html
 [MKV]: https://www.matroska.org/what_is_matroska.html
 [SPDX.org]: https://spdx.org/licenses/GPL-3.0-or-later.html
+[Documentação]: https://learn.microsoft.com/powershell/scripting/install/install-powershell
 [JetBrains Mono]: https://fonts.google.com/specimen/JetBrains+Mono
 [Cascadia Mono]: https://fonts.google.com/specimen/Cascadia+Mono
 [Ubuntu Mono]: https://fonts.google.com/specimen/Ubuntu+Mono
