@@ -152,9 +152,9 @@ A fonte de software está configurada incorretamente ou não provisionada; a atu
 ### Inventário
 
 <details>
-<summary>Período de Retenção</summary>
+<summary>Intervalo de Atualização</summary>
 
-O Período de Retenção define por quanto tempo os dados coletados permanecem válidos. Após esse período, você será notificado para atualizar o inventário.
+O Intervalo de Atualização define por quanto tempo os dados coletados permanecem válidos. Após esse período, você será notificado para atualizar o inventário.
 
 Esse recurso ajuda a manter os dados atualizados e proporciona controle preciso sobre alterações. Você pode ajustar o período conforme sua estratégia de inventário.
 
@@ -353,18 +353,17 @@ A Solicitação de Autorização exige confirmação explícita do usuário ao e
 ### Desenvolvimento
 
 <details>
-<summary>Estrutura do Diretório de Projeto</summary>
+<summary>Estrutura de Diretórios de Projeto</summary>
 
 ```
 [Usuário] ┐
-          └ Workspace ┐                                                              | Diretório de trabalho
-                      └ Workflow ┐                                                   | Diretório de projeto
-                                 └ Releases ┐                                        | Diretório de releases
-                                            └ [Year] ┐                               | Diretório de controle
-                                                     └ [Release] ┐                   | Diretório de controle
-                                                                 ├ Management        | Arquivos de gerenciamento
-                                                                 ├ Repository        | Arquivos do repositório
-                                                                 └ Software          | Arquivos de software
+          └ Workspace ┐                                                   | Diretório de trabalho
+                      └ Workflow ┐                                        | Diretório de projeto
+                                 └ [Year] ┐                               | Diretório de controle
+                                          └ [Release] ┐                   | Diretório de controle
+                                                      ├ Management        | Arquivos de gerenciamento
+                                                      ├ Repository        | Arquivos do repositório
+                                                      └ Software          | Arquivos de software
 ```
 
 </details>
