@@ -52,6 +52,6 @@
         <span> ∙ </span>
         <a href="/License.md">Licenças</a>
         <span> ∙ </span>
-        A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Copyright © 2021-2026 David Camargo. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito e contribuições externas não são aceitas.
+        As informações fornecidas estão sujeitas a alterações sem aviso prévio. A disponibilidade de recursos e funcionalidades pode variar conforme a plataforma. Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários. Este é um projeto de desenvolvimento restrito. Copyright © 2021-2026 David Camargo.
     </sub>
 </div>
