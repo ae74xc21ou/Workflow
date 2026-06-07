@@ -350,33 +350,6 @@ A Solicitação de Autorização exige confirmação explícita do usuário ao e
 
 </details>
 
-### Desenvolvimento
-
-<details>
-<summary>Estrutura de Diretórios de Projeto</summary>
-
-```
-[Usuário] ┐
-          └ Workspace ┐                                                   | Diretório de trabalho
-                      └ Workflow ┐                                        | Diretório de projeto
-                                 └ [Year] ┐                               | Diretório de controle
-                                          └ [Release] ┐                   | Diretório de controle
-                                                      ├ Management        | Arquivos de gerenciamento
-                                                      ├ Repository        | Arquivos do repositório
-                                                      └ Software          | Arquivos de software
-```
-
-</details>
-
-<details>
-<summary>Como Empacotar um Release</summary>
-
-- Configure o apontamento para o diretório de projeto em `Configurações` `>` `Desenvolvimento` `>` `Diretório de Projeto`
-- Siga para `Configurações` `>` `Desenvolvimento` `>` `Empacotar`
-- Especifique o número de release desejado
-
-</details>
-
 ## Modos
 
 <details>
@@ -398,32 +371,6 @@ O Modo de Recuperação atua como uma camada automática de proteção contra co
 Quando ativo, a execução de software é bloqueada para evitar comportamento imprevisível ou risco ao ambiente. Em seguida, o software é reinstalado automaticamente.
 
 O Modo de Recuperação não pode ser habilitado ou desabilitado manualmente.
-
-</details>
-
-## Código-fonte
-
-Prepare-se para uma jornada emocionante pelo universo do software livre.
-
-<details>
-<summary>Fundamentos da Licença GPL</summary>
-
-- **Liberdade 0:** Execute o software como quiser, para qualquer finalidade.
-- **Liberdade 1:** Explore e ajuste o software conforme suas necessidades.
-- **Liberdade 2:** Compartilhe o software para ajudar outras pessoas.
-- **Liberdade 3:** Melhore o software e compartilhe suas inovações com a comunidade.
-
-> Verifique [SPDX.org][SPDX.org] para mais informações.
-
-</details>
-
-<details>
-<summary>Acesso ao Código-fonte</summary>
-
-- Baixe a versão mais recente de software do repositório.
-- Extraia o conteúdo do pacote com um software compatível.
-- Abra o arquivo de software `ps1` em um IDE.
-- Aproveite a experiência!
 
 </details>
 
@@ -460,8 +407,6 @@ Algumas funcionalidades de Workflow podem requerer acesso a pastas de usuário p
 Siga para `Configurações` `>` `Extensões`
 
 > Pode requerer elevação de privilégios
-
-> As extensões foram movidas para a estrutura de diretórios de software a partir da versão **25.05.0**. Workflow não utiliza executáveis ou binários disponíveis no `$PATH` das plataformas, com exceção do 7-Zip no Windows, e FFmpeg e FLAC no Linux. Essa mudança permite um controle preciso de instalação, atualização e versionamento de extensões a partir do repositório ou site oficial, sem a necessidade de elevação de privilégios para a instalação de softwares adicionais.
 
 </details>
 
@@ -511,7 +456,6 @@ Para um design agradável, moderno e sofisticado no terminal, prefira a fonte [J
 [WebP]: https://developers.google.com/speed/webp
 [FLAC]: https://xiph.org/flac/documentation.html
 [MKV]: https://www.matroska.org/what_is_matroska.html
-[SPDX.org]: https://spdx.org/licenses/GPL-3.0-or-later.html
 [Documentação]: https://learn.microsoft.com/powershell/scripting/install/install-powershell
 [JetBrains Mono]: https://fonts.google.com/specimen/JetBrains+Mono
 [Cascadia Mono]: https://fonts.google.com/specimen/Cascadia+Mono
