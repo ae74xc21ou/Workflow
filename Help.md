@@ -199,6 +199,13 @@ Esse recurso evita operações excessivamente longas em cenários com grande vol
 </details>
 
 <details>
+<summary>Controle de Colisão</summary>
+
+O Controle de Colisão impede a sobrescrita acidental de dados ao analisar previamente o diretório de destino em busca de arquivos preexistentes com o mesmo nome e extensão do arquivo final. O fluxo de conversão é interrompido imediatamente em caso de colisão de arquivos.
+
+</details>
+
+<details>
 <summary>Preservar Originais</summary>
 
 Quando habilitada, a opção Preservar Originais mantém os arquivos de entrada no diretório de conversão após a conclusão do processo. Workflow não remove o conteúdo original automaticamente, permitindo que você decida quando e como descartá-lo.
@@ -215,14 +222,6 @@ Essa opção é útil se você prefere revisar o resultado da conversão antes d
 O suporte a multidispositivos e multiusuários de Workflow permite armazenar backups de vários dispositivos e usuários na mesma estrutura de backup.
 
 Workflow opera em nível de usuário, impedindo que outros acessem seus dados locais. No entanto, o backup de dados não é criptografado. É importante garantir que os diretórios de backup e réplica sejam armazenados de forma segura para proteger seus dados contra acesso não autorizado.
-
-```
-[Configurável] ┐                                                           | Diretório de backup/replica
-               └ Workflow ┐                                                | Diretório de armazenamento
-                          └ [Dispositivo] ┐                                | Diretório de controle
-                                          └ [Usuário] ┐                    | Diretório de controle
-                                                      └ {+}                | Dados
-```
 
 </details>
 
@@ -266,6 +265,13 @@ Esse recurso reduz riscos de perda de dados ao manter uma cópia adicional em um
 ## Configurações
 
 ### Monitoramento
+
+<details>
+<summary>Controle de Execução</summary>
+
+O Controle de Execução impede a execução de instâncias adicionais de software. Essa abordagem previne acessos simultâneos à configurações e arquivos, mitiga o risco de corrupção de dados, preserva a integridade de arquivos em uso, e garante a estabilidade operacional de software.
+
+</details>
 
 <details>
 <summary>Eventos</summary>
@@ -359,7 +365,7 @@ O Modo de Preservação atua como um recurso automático de proteção das confi
 
 Quando ativo, o software opera normalmente, porém nenhuma alteração nas configurações é persistida. Todas as modificações são descartadas ao encerrar a execução.
 
-O Modo de Preservação não pode ser habilitado ou desabilitado manualmente.
+O Modo de Preservação não pode ser gerenciado manualmente.
 
 </details>
 
@@ -370,7 +376,7 @@ O Modo de Recuperação atua como uma camada automática de proteção contra co
 
 Quando ativo, a execução de software é bloqueada para evitar comportamento imprevisível ou risco ao ambiente. Em seguida, o software é reinstalado automaticamente.
 
-O Modo de Recuperação não pode ser habilitado ou desabilitado manualmente.
+O Modo de Recuperação não pode ser gerenciado manualmente.
 
 </details>
 
@@ -395,7 +401,7 @@ O Modo de Recuperação não pode ser habilitado ou desabilitado manualmente.
 <details>
 <summary>Windows: Acesso a Pastas Controladas</summary>
 
-Algumas funcionalidades de Workflow podem requerer acesso a pastas de usuário protegidas pelo recurso **Acesso a Pastas Controladas** do Windows, quando habilitado. Adicione o PowerShell `pwsh.exe`, o 7-Zip `7z.exe`, o WebP `cwebp.exe`, o FFmpeg `ffmpeg.exe` e o FLAC `flac.exe` à lista de aplicativos permitidos para que funcionem adequadamente.
+Algumas funcionalidades de Workflow podem requerer acesso a pastas de usuário protegidas pelo recurso **Acesso a Pastas Controladas** do Windows, quando habilitado. Adicione o PowerShell `pwsh.exe`, o 7-Zip `7z.exe`, o WebP `cwebp.exe`, o FLAC `flac.exe` e o FFmpeg `ffmpeg.exe` à lista de aplicativos permitidos para que funcionem adequadamente.
 
 </details>
 
