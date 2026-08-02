@@ -152,6 +152,15 @@ A fonte de software está configurada incorretamente ou não provisionada; a atu
 ### Inventário
 
 <details>
+<summary>Verificação Avançada</summary>
+
+A Verificação Avançada detecta corrupção silenciosa de dados por falhas ocultas de transferência ou armazenamento, induzindo a validação por hash criptográfico em todos os arquivos do inventário.
+
+Embora o processo exija maior consumo de I/O e processamento devido à leitura e ao cálculo massivo de dados, essa abordagem assegura a integridade absoluta e a confiabilidade dos dados a longo prazo.
+
+</details>
+
+<details>
 <summary>Intervalo de Atualização</summary>
 
 O Intervalo de Atualização define por quanto tempo os dados coletados permanecem válidos. Após esse período, você será notificado para atualizar o inventário.
@@ -274,7 +283,7 @@ O Controle de Execução impede a execução de instâncias adicionais de softwa
 </details>
 
 <details>
-<summary>Eventos</summary>
+<summary>Registro de Eventos</summary>
 
 O Registro de Eventos coleta e armazena localmente informações sobre o ambiente, usuário e a execução do software. Esses dados são automaticamente excluídos conforme a Política de Retenção. Você pode desativar o Registro de Eventos ou ajustar o período de retenção nas configurações.
 
@@ -285,7 +294,7 @@ Nenhum dado é enviado para a internet.
 </details>
 
 <details>
-<summary>Bateria</summary>
+<summary>Verificação de Bateria</summary>
 
 A Verificação de Bateria impede a execução de funcionalidades que demandam maior poder de processamento quando o nível atual estiver abaixo do valor configurado. Quando essa condição é identificada, a execução é interrompida e você pode autorizar manualmente a continuidade, garantindo maior segurança em dispositivos móveis ou com baixo nível de bateria.
 
@@ -296,21 +305,21 @@ Esse controle evita interrupções inesperadas e protege a integridade das opera
 ### Segurança
 
 <details>
-<summary>Integridade</summary>
+<summary>Verificação de Integridade</summary>
 
 A Verificação de Integridade monitora a integridade de software, atualizações e backups com o uso de funções de hash criptográficas, garantindo operações de software confiáveis e seguras.
 
 </details>
 
 <details>
-<summary>Sentinela</summary>
+<summary>Validação de Sentinela</summary>
 
-A Verificação de Sentinela monitora arquivos críticos com o uso de identificadores únicos globais e funções de hash criptográficas, detectando e isolando inconsistências ou corrupções.
+A Validação de Sentinela monitora arquivos críticos com o uso de identificadores únicos globais e funções de hash criptográficas, detectando e isolando inconsistências ou corrupções.
 
 </details>
 
 <details>
-<summary>Autorização</summary>
+<summary>Solicitação de Autorização</summary>
 
 A Solicitação de Autorização exige confirmação explícita do usuário ao executar operações críticas, como uso intensivo de recursos, ou alteração de estados de software, evitando que mudanças relevantes ocorram sem supervisão direta.
 

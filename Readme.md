@@ -1,46 +1,41 @@
-<p align="center">
+<div align="center">
     <picture>
         <source media="(prefers-color-scheme: light)" srcset="/Images/IntroductionLight.webp"/>
         <img src="/Images/IntroductionDark.webp"/>
     </picture>
-</p>
+</div>
 
-<p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/InventoryLight.webp"/>
-        <img src="/Images/InventoryDark.webp"/>
-    </picture>
-</p>
+## Funcionalidades
 
-<p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/ConversionLight.webp"/>
-        <img src="/Images/ConversionDark.webp"/>
-    </picture>
-</p>
+### Inventário: Controle absoluto.
 
-<p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/BackupLight.webp"/>
-        <img src="/Images/BackupDark.webp"/>
-    </picture>
-</p>
+Analisa seus dados automaticamente, identificando o estado de cada arquivo com segurança criptográfica. Monitore alterações, adições e remoções, mantendo controle preciso sobre seus dados.
 
-<p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/Images/ResourcesLight.webp"/>
-        <img src="/Images/ResourcesDark.webp"/>
-    </picture>
-</p>
+### Conversão: Deixe tudo no automático.
 
-<p align="center">
-    <a href="https://github.com/ae74xc21ou/workflow/releases">
-        <picture>
-            <source media="(prefers-color-scheme: light)" srcset="/Images/DownloadLight.webp"/>
-            <img src="/Images/DownloadDark.webp"/>
-        </picture>
-    </a>
-</p>
+Converte automaticamente milhares de imagens, áudios e vídeos com algoritmos eficientes e formatos abertos, padrões da indústria. Uma experiência fluida e simples que une compatibilidade universal e preservação de dados a longo prazo.
+
+### Backup: Seus dados. Nas suas mãos.
+
+Fazer backup nunca foi tão simples e intuitivo. Selecione seus dados com facilidade, ajuste as configurações de compressão, destino e retenção. Seus dados ficam sempre seguros e acessíveis, exatamente como você os deixou.
+
+## E muito mais
+
+- Software rolling release
+- Multiplataforma
+- Suporte a múltiplos idiomas
+- Transferência de configurações
+- Atualização automática
+- Verificação de integridade
+- Validação de sentinela
+- Solicitação de autorização
+- Controle de execução
+- Registro de eventos
+- Verificação de bateria
+- Integração com extensões
+- Execução resiliente
+- Notificações
+- Personalização
 
 <h1></h1>
 
