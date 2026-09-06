@@ -9,15 +9,19 @@
 
 ### Inventário: Controle absoluto.
 
-Analisa seus dados automaticamente, identificando o estado de cada arquivo com segurança criptográfica. Monitore alterações, adições e remoções, mantendo controle preciso sobre seus dados.
+Analisa seus dados e identifica o estado de cada arquivo com segurança criptográfica. Monitore alterações, adições e remoções, mantendo controle preciso sobre seus dados.
 
 ### Conversão: Deixe tudo no automático.
 
-Converte automaticamente milhares de imagens, áudios e vídeos com algoritmos eficientes e formatos abertos, padrões da indústria. Uma experiência fluida e simples que une compatibilidade universal e preservação de dados a longo prazo.
+Converte automaticamente milhares de imagens, áudios e vídeos com algoritmos eficientes e formatos abertos. Uma experiência fluida e simples que une compatibilidade universal e preservação de dados a longo prazo.
 
 ### Backup: Seus dados. Nas suas mãos.
 
-Fazer backup nunca foi tão simples e intuitivo. Selecione seus dados com facilidade, ajuste as configurações de compressão, destino e retenção. Seus dados ficam sempre seguros e acessíveis, exatamente como você os deixou.
+Fazer backup nunca foi tão simples e intuitivo. Selecione seus dados com facilidade, ajuste as configurações de compressão, destino e retenção. Seus arquivos ficam sempre seguros e acessíveis, exatamente como você os deixou.
+
+### Sincronização: Consistência sob demanda.
+
+Sincroniza pastas e arquivos de forma inteligente entre diferentes locais ou dispositivos. Uma solução eficiente para manter seus dados atualizados e prontos para uso onde quer que você precise.
 
 ## E muito mais
 
@@ -37,9 +41,8 @@ Fazer backup nunca foi tão simples e intuitivo. Selecione seus dados com facili
 - Notificações
 - Personalização
 
-<h1></h1>
-
 <div align="center">
+    <h1></h1>
     <sub>
         <a href="/Help.md">Ajuda</a>
         <span> ∙ </span>
