@@ -1,7 +1,16 @@
 {
 	"DevelopmentStatus": "1",
-	"UpdateNumber": "26.08.0",
+	"UpdateNumber": "26.09.0",
 	"Releases": [
+		{
+			"ReleaseNumber": "26.09.0",
+			"SupportStatus": "1",
+			"PackageHashes": [
+				"21566471E5108078DA106A1F96E5EABFC557AB0FAAE948AF1B7B7DC2A48EB050",
+				"76E9D4477D7F4B1230A8A85989266845F330F2B8DC25A0FE0FD76EBAE66B9820",
+				"7DCFD6601255EA9AFFA74F34DEE2C1C9F9037BC8600F74048307A58002688C47"
+			]
+		},
 		{
 			"ReleaseNumber": "26.08.0",
 			"SupportStatus": "1",
@@ -22,7 +31,7 @@
 		},
 		{
 			"ReleaseNumber": "26.06.0",
-			"SupportStatus": "1",
+			"SupportStatus": "0",
 			"PackageHashes": [
 				"39DEC4F3CCEF6437FF4499F0EA0CA7EF94E9C2075FDC277C790411B78AF069D1",
 				"A0E151BF24BCF5134334C4809BED1DD9F41ED51E1992C9496008EBCD345D45A0",
@@ -552,6 +561,14 @@
 			]
 		}
 	],
+	"Extensions": [
+		{
+			"SevenZip": "26.02",
+			"WebP": "1.6.0",
+			"FLAC": "1.5.0",
+			"FFmpeg": "8.0.1"
+		}
+	],
 	"Sentry": [
 		{
 			"Identifier": "3D481D2C-2778-44F4-87FF-A6B1553639F7",
@@ -562,11 +579,6 @@
 		{
 			"Identifier": "3D481D2C-2778-44F4-87FF-A6B1553639F7",
 			"Hash": "D65ACD8EFDDA3A30F2AE08E87772A1C96FE7C9B709E0326FDA9E3667E70552E3"
-		}
-	],
-	"Note": [
-		{
-			"HashOrder": "7Z-ZIP-TAR"
 		}
 	]
 }
