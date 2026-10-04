@@ -160,15 +160,6 @@ Embora o processo exija maior consumo de I/O e processamento devido à leitura e
 
 </details>
 
-<details>
-<summary>Intervalo de Atualização</summary>
-
-O Intervalo de Atualização define por quanto tempo os dados coletados permanecem válidos. Após esse período, você será notificado para atualizar o inventário.
-
-Esse recurso ajuda a manter os dados atualizados e proporciona controle preciso sobre alterações. Você pode ajustar o período conforme sua estratégia de inventário.
-
-</details>
-
 ### Conversão
 
 <details>
@@ -312,9 +303,9 @@ A Verificação de Integridade monitora a integridade de software, atualizaçõe
 </details>
 
 <details>
-<summary>Validação de Sentinela</summary>
+<summary>Validação de Autenticidade</summary>
 
-A Validação de Sentinela monitora arquivos críticos com o uso de identificadores únicos globais e funções de hash criptográficas, detectando e isolando inconsistências ou corrupções.
+`Experimental` A Validação de Autenticidade garante a origem legítima e protege a integridade da cadeia de distribuição de software utilizando criptografia assimétrica.
 
 </details>
 

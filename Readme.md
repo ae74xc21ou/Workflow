@@ -31,7 +31,7 @@ Sincroniza pastas e arquivos de forma inteligente entre diferentes locais ou dis
 - Transferência de configurações
 - Atualização automática
 - Verificação de integridade
-- Validação de sentinela
+- Validação de autenticidade
 - Solicitação de autorização
 - Controle de execução
 - Registro de eventos
