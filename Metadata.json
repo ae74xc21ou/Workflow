@@ -1,7 +1,16 @@
 {
 	"DevelopmentStatus": "1",
-	"UpdateNumber": "26.09.0",
+	"UpdateNumber": "26.10.0",
 	"Releases": [
+		{
+			"ReleaseNumber": "26.10.0",
+			"SupportStatus": "1",
+			"PackageHashes": [
+				"B7EDA14277A6AF6DAA355A9549D966164BADF23C72F342B1BAE8B01E3F46B286",
+				"178BEEC12D925A129DE628DCA71557970F0E537FBC2E61316E30E4FC32DD0754",
+				"D76E15014F7AD6EB17B3A4F9985BA94E0FF857FE9BD488D2EE65628BC2D2D5C2"
+			]
+		},
 		{
 			"ReleaseNumber": "26.09.0",
 			"SupportStatus": "1",
@@ -22,7 +31,7 @@
 		},
 		{
 			"ReleaseNumber": "26.07.0",
-			"SupportStatus": "1",
+			"SupportStatus": "0",
 			"PackageHashes": [
 				"AEE602BA97153425DAB7E8D42C3BB62F5E392D2D9F88F8B3C2FA613D1000BB69",
 				"3672F19BD5E7178CC41B4F9468F4AB116732377F444283DCD32C86E279DB710C",
@@ -559,14 +568,6 @@
 			"PackageHashes": [
 				"4A50D531B9A2B6F6FE5C9D8FE584B7355517C6E236DC5D5A7FCFFB762DF43BEF"
 			]
-		}
-	],
-	"Extensions": [
-		{
-			"SevenZip": "26.02",
-			"WebP": "1.6.0",
-			"FLAC": "1.5.0",
-			"FFmpeg": "8.0.1"
 		}
 	],
 	"Sentry": [
